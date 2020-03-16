@@ -18,7 +18,7 @@
         </div>
         <!-- /.col -->
         <div class="col-sm-6 invoice-col" style="text-align: right;">   
-          <button type="button" class="btn btn-default" data-toggle="modal" data-target="#tambah_struktural">
+          <button type="button" class="btn btn-default" data-toggle="modal" data-target="#tambah">
                 Tambah Data
           </button>
         </div>
@@ -44,27 +44,7 @@
               <th>Aksi</th>
             </thead>
             <tbody id="showdata">
-            <?php $x=1; $no=0; foreach($data as $dt){?>
-              <tr>
-                <td><?php echo ++$no;?></td>
-                <td><?php echo $dt['nama_pegawai'];?></td>
-                <td><?php echo $dt['nip'];?></td>
-                <td><?php echo $dt['jabatan_pegawai']."/".$dt['pangkat_pegawai']."/".$dt['golongan_pegawai']?></td>
-                <td><?php echo $dt['keterangan_pegawai'];?></td>
-                <td>
-                  <center>
-                    <div class="tooltip-demo">
-                      
-                        <button data-balloon="Edit" data-balloon-pos="up" data-toggle="modal" data-target="#ubah_struktural"  class="btn btn-info" title="Ubah"><i class="fa fa-pencil"></i></button>
-
-    
-                        <button  data-balloon-pos="up" data-toggle="modal" data-target="#hapus_struktural" class="btn btn-danger" title="Hapus"><i class="fa fa-trash"></i></button>
-
-                    </div>
-                  </center>
-                </td>
-              </tr>
-            <?php }?>
+            <?php echo $data; ?>
             </tbody>
           </table>
         </div>
@@ -76,56 +56,22 @@
 
 </div>
 <script type="text/javascript">
-  function struktural_ubah(id_struktural,id_file,nama_struktural,jabatan_struktural,nip_pegawai) {
-    $('#jbtn1').removeAttr('selected');
-    $('#jbtn2').removeAttr('selected');
-    $('#jbtn3').removeAttr('selected');
-    $('#jbtn4').removeAttr('selected');
-    $('#jbtn5').removeAttr('selected');
-    $('#jbtn6').removeAttr('selected');
-    $('#jbtn7').removeAttr('selected');
-    $('#jbtn8').removeAttr('selected');
-    $('#jbtn9').removeAttr('selected');
-    $('#jbtn10').removeAttr('selected');
-
-
-    $('#id_struktural1').val(id_struktural);
-    $('#id_file1').val(id_file);
-    $('#nama_struktural1').val(nama_struktural);
-    if(jabatan_struktural=="Kepala Kejaksaan Tinggi"){
-      $('#jbtn1').attr('selected',"true");
-    }else if(jabatan_struktural=="Wakil Kepala Kejaksaan Tinggi"){
-      $('#jbtn2').attr('selected',"true");
-    }else if(jabatan_struktural=="Kepala Bagian Tata Usaha"){
-      $('#jbtn3').attr('selected',"true");
-    }else if(jabatan_struktural=="Asisten Pembinaan"){
-      $('#jbtn4').attr('selected',"true");
-    }else if(jabatan_struktural=="Asisten Intelijen"){
-      $('#jbtn5').attr('selected',"true");
-    }else if(jabatan_struktural=="Asisten Tindak Pidana Umum"){
-      $('#jbtn6').attr('selected',"true");
-    }else if(jabatan_struktural=="Asisten Tindak Pidana Khusus"){
-      $('#jbtn7').attr('selected',"true");
-    }else if(jabatan_struktural=="Asisten Perdata dan Tata Usaha Negara"){
-      $('#jbtn8').attr('selected',"true");
-    }else if(jabatan_struktural=="Asisten Pengawasan"){
-      $('#jbtn9').attr('selected',"true");
-    }else if(jabatan_struktural=="Koordinator"){
-      $('#jbtn10').attr('selected',"true");
-    }
-    $('#nip_pegawai1').val(nip_pegawai);
-
+  function ubah(id,nip,nama,jabatan,pangkat,golongan,keterangan_pegawai) {
+    $('#idU').val(id)
+    $('#nipU').val(nip)
+    $('#nama_pegawaiU').val(nama)
+    $('#jabatan_pegawaiU').val(jabatan)
+    $('#pangkat_pegawaiU').val(pangkat)
+    $('#golongan_pegawaiU').val(golongan)
+    $('#keterangan_pegawaiU').val(keterangan_pegawai)
+  }
+  function hapus(id,no) {
+    var string="Apakah Anda Ingin Menghapus Jaksa Pada Baris Ke-"+no;
+    $('#idH').val(id)
+    $('#baris').html(string)
   }
 </script>
-<script type="text/javascript">
-function struktural_hapus(id_struktural,id_file,no) {
-  var str="apakah anda ingin menghapus pada baris ke "+no+" ?";
-   $('#id_struktural3').val(id_struktural);
-   $('#id_file3').val(id_file);
-   $('#showstruktural').html(str);
-  }
-</script>
-<div class="modal fade" id="tambah_struktural">
+<div class="modal fade" id="tambah">
   <?php  echo form_open_multipart('admin/jaksa/tambah/',array('class'=>"form-horizontal",'method'=>'POST','id'=>'tambahData')); ?>
           <div class="modal-dialog">
             <div class="modal-content">
@@ -193,4 +139,88 @@ function struktural_hapus(id_struktural,id_file,no) {
         </div>
   </form>          <!-- /.modal-dialog -->
 </div>
+<div class="modal fade" id="ubah">
+  <?php  echo form_open_multipart('admin/jaksa/ubah/',array('class'=>"form-horizontal",'method'=>'POST','id'=>'ubahData')); ?>
+      <input type="hidden" name="id_pegawai" id="idU">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button id="close" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Ubah Jaksa</h4>
+              </div>
+              <div class="modal-body">
+                 
+              <div class="modal-body form">
+                <div class="form-group">
+                  <label class="control-label col-md-2">Nama</label>
+                    <div class="col-md-9">
+                      <input name="nama_pegawai" id="nama_pegawaiU" required="" value="" required class="form-control" type="text">
+                    </div>
+                </div>              
+                 <div class="form-group">
+                    <label class="control-label col-md-2">NIP</label>
+                    <div class="col-md-9">
+                     <input  name="nip" id="nipU" type="text" maxlength="18" size="18" class="form-control" required>
+                    </div>
+                    <div class="col-md-1" id="nip_result"></div>
+                </div>  
+                <div class="form-group">
+                      <label class="control-label col-md-2">Jabatan</label>
+                      <div class="col-md-9">
+                       <input  name="jabatan_pegawai" id="jabatan_pegawaiU" type="text" class="form-control" required>
+                      </div>
+                </div>
+                <div class="form-group">
+                      <label class="control-label col-md-2">Pangkat</label>
+                      <div class="col-md-9">
+                       <input  name="pangkat_pegawai" id="pangkat_pegawaiU" type="text" class="form-control" required>
+                      </div>
+                </div>
+                <div class="form-group">
+                      <label class="control-label col-md-2">Golongan</label>
+                      <div class="col-md-9">
+                       <input  name="golongan_pegawai" id="golongan_pegawaiU" type="text" class="form-control" required>
+                      </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-md-2">Keterangan</label>
+                  <div class="col-md-9">
+                    <input type="text" id="keterangan_pegawaiU" name="keterangan_pegawai" class="form-control">
+                  </div>
+                </div>
 
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                <button type="button" id="button_edit" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+        </div>
+  </form>          <!-- /.modal-dialog -->
+</div>
+<div class="modal fade" id="hapus">
+  <?php  echo form_open_multipart('admin/jaksa/hapus/',array('class'=>"form-horizontal",'method'=>'POST','id'=>'hapusData')); ?>
+      <input type="hidden" name="id_pegawai" id="idH">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Hapus Jaksa</h4>
+              </div>
+              <div class="modal-body">
+                <center><label class="control-label" id="baris"></label></center>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                <button type="button" id="button_hapus" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+        </div>
+  </form>          <!-- /.modal-dialog -->
+</div>

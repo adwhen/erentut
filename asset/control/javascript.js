@@ -54,8 +54,9 @@ $(document).ready(function(){
               //div preview kita kosongkan lagi
               var hasil=JSON.parse(data);
               $(form).trigger('reset');
-              $("#showdata").html('');
               $("#showdata").html(hasil.baris);
+              $('#tambah').modal('hide');
+              $('#close').click();
               //mulai memproses respon dari upload.php
               if(data.error){
                   $('.loading').html(data.error)
@@ -88,13 +89,12 @@ $(document).ready(function(){
 
               //div preview kita kosongkan lagi
               var hasil=JSON.parse(data);
-              $("#ubahData").trigger('reset');
-              galeri=hasil.galeri;
-              $("#showdata").html("");
+              $("#ubah").trigger('reset');
 
            
               $("#showdata").html(hasil.baris);
-              
+              $('#ubah').modal('hide');
+              $('#close').click();
 
               //mulai memproses respon dari upload.php
               if(data.error){
@@ -127,14 +127,10 @@ $(document).ready(function(){
 
               //div preview kita kosongkan lagi
               var hasil=JSON.parse(data);
-              $("#hapusData").trigger('reset');
-              galeri=hasil.galeri;
-
-              $("#showdata").html("");
-
-             
+              $("#hapus").trigger('reset');   
               $("#showdata").html(hasil.baris);
-              
+              $('#hapus').modal('hide');
+              $('#close').click();
 
               //mulai memproses respon dari upload.php
               if(data.error){
@@ -154,6 +150,4 @@ $(document).ready(function(){
 
 
 });
-function btn_p(){
-  alert(1);
-}
+
