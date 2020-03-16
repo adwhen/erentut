@@ -1,0 +1,203 @@
+/*Login*/
+
+#containerLogin {
+	width: 50%;
+}
+
+.logoLogin {
+	width: 15%
+}
+
+@media only screen and (max-width: 600px) {
+	#containerLogin {
+		width: 100%;
+	}
+
+	.logoLogin {
+		width: 40%;
+	}
+}
+
+/*Login*/
+
+/*Awal*/
+
+#containerMenuAtas {
+	width: 45%;
+}
+
+.beritaAwal1 {
+	width: 60%;
+	float: left;
+}
+
+.beritaAwal2 {
+	width: 40%;
+	float: left;
+}
+
+.slide-wrapper {
+	position: relative;
+}
+
+#iconButton {
+	font-size: 60px;
+	color: #fff;
+	margin-bottom: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+
+	#petaFooter {
+		width: 100%;
+	}
+
+	.beritaAwal1 {
+		width: 100%;
+	}
+
+	.beritaAwal2 {
+		width: 100%;
+	}
+
+	#carouselAtas {
+		display: none;
+	}
+
+	#logoMenuAtas {
+		display: none;
+	}
+
+	.buttonBawah {
+		display: none;
+	}
+
+	#divButton {
+		background-color: rgba(255, 255, 255, 1);
+		height: 1000px;
+	}
+
+	#containerMenuAtas {
+		width: 100%;
+	}
+
+	#iconButton {
+		font-size: 20px;
+	}
+
+	#banner1 {
+		margin-top: 690px;
+	}
+
+	#menuAtas {
+		margin-top: 50px;
+	}
+
+}
+
+/*Awal*/
+
+/* Visi Misi */
+
+.logoVisi {
+	width: 20%;
+	float: left;
+}
+
+.tulisanVisi {
+	width: 80%;
+	float: left;
+}
+
+@media only screen and (max-width: 600px) {
+
+	#petaFooter {
+		width: 100%;
+	}
+
+	.logoVisi {
+		width: 100%;
+	}
+
+	.tulisanVisi {
+		width: 100%;
+	}
+}
+
+/* Visi Misi */
+
+/* struktural */
+
+hr.garisBaganVer1 {
+	width: 4%;
+	transform: rotate(90deg);
+	border: 2px solid green;
+}
+
+hr.garisBaganVer2 {
+	width: 4%;
+	transform: rotate(90deg);
+	border: 2px solid green;
+}
+
+hr.garisBaganHor1 {
+	width: 40%;
+	border: 2px solid green;
+	margin-top: 28px;
+}
+
+hr.garisBaganVer3 {
+	width: 100%;
+	transform: rotate(90deg);
+	border: 2px solid green;
+	margin-left: -2px;
+}
+
+hr.garisBaganVer4 {
+	width: 100%;
+	transform: rotate(90deg);
+	border: 2px solid green;
+	margin-top: 34px;
+	margin-left: -2px;
+}
+
+hr.garisBaganVer5 {
+	width: 4%;
+	transform: rotate(90deg);
+	border: 2px solid green;
+}
+
+hr.garisBaganHor2 {
+	width: 60%;
+	border: 2px solid green;
+	margin-top: 28px;
+}
+
+@media only screen and (max-width: 600px) {
+
+	hr.garisBaganVer1,
+	hr.garisBaganVer2,
+	hr.garisBaganHor1,
+	hr.garisBaganVer3,
+	hr.garisBaganVer4,
+	hr.garisBaganVer5,
+	hr.garisBaganHor2 {
+		display: none;
+	}
+}
+
+/* struktural */
+
+/*berita*/
+.fotoBerita {
+	width: 40%;
+	display: grid;
+}
+
+#beritaFoto {
+	background-repeat:no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/*berita*/
