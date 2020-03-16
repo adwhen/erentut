@@ -148,6 +148,7 @@ function struktural_hapus(id_struktural,id_file,no) {
                     <div class="col-md-9">
                      <input  name="nip" id="nip" type="text" maxlength="18" size="18" class="form-control" required>
                     </div>
+                    <div class="col-md-1" id="nip_result"></div>
                 </div>  
                 <div class="form-group">
                       <label class="control-label col-md-2">Jabatan</label>

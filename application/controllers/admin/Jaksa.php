@@ -34,5 +34,14 @@ class Jaksa extends CI_Controller {
             );
             echo json_encode($data); 
 	}
+	public function nip(){
+			$check=$this->db->get_where('tb_pegawai',array('nip'=>$this->input->post('nip')))->result_array();
+		    if(count($check)>0){
+		      echo '<label class="text-danger"><span><i class="fa fa-times" aria-hidden="true">
+		   </i> Silang</span></label>';
+		    }else{
+		      echo '<label class="text-success"><span><i class="fa fa-check-circle-o" aria-hidden="true"></i> Ceklist</span></label>';
+		    }
+	}
 	
 }

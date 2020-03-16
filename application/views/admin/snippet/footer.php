@@ -203,6 +203,25 @@
       'scrollY': 300,
       'scrollCollapse': true,
       'scrollX'   : true
+</script>
     })
   })
+<script type="text/javascript">
+ $(document).ready(function(){
+  $('#nip').change(function(){
+   var nip = $('#nip').val();
+   if(nip != ''){
+    $.ajax({
+     url: "<?php echo base_url(); ?>admin/jaksa/nip",
+      method : "POST",
+     data: {nip:nip},
+     success: function(data){
+      $('#nip_result').html(data);
+     },error : function(data){
+              alert('something wrong...');
+    }
+    });
+   }
+  });
+ });
 </script>
