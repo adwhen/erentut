@@ -27,6 +27,7 @@ class Jaksa extends CI_Controller {
 				'golongan_pegawai'	=>$this->input->post('golongan_pegawai'),
 				'keterangan_pegawai'	=>$this->input->post('keterangan_pegawai'),
 				'password'	=>md5($this->input->post('password')),
+				'level'		=>$this->input->post('level')
 			);
 			$this->db->insert('tb_pegawai',$data);
             $data = array(
@@ -58,6 +59,7 @@ class Jaksa extends CI_Controller {
 				'golongan_pegawai'	=>$this->input->post('golongan_pegawai'),
 				'keterangan_pegawai'	=>$this->input->post('keterangan_pegawai'),
 				'password'	=>md5($this->input->post('password')),
+				'level'		=>$this->input->post('level')
 			);
 			$this->db->update('tb_pegawai',$data,$where);
             $data = array(
