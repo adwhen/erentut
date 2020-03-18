@@ -19,19 +19,20 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <label class="col-sm-2 control-label">Barang Bukti</label>
+                  <label class="col-sm-2 control-label">Pasal Barang Bukti</label>
 
                   <div class="col-sm-10">
                     <input value="<?php echo $data[0]['pasal_bukti']; ?>" class="form-control" id="pasal_bukti" name="pasal_bukti" type="text"  >
                   </div>
                 </div>
                 <div class="form-group">
-                  <label class="col-sm-2 control-label">File Barang Bukti</label>
+                  <label class="col-sm-2 control-label">Barang Bukti</label>
 
                   <div class="col-sm-10">
-                    <input class="form-control" id="barang_bukti" name="barang_bukti" type="file"  >
+                    <textarea class="form-control" id="barang_bukti" name="barang_bukti" type="text"  ></textarea>
                   </div>
                 </div>
+
                 <div class="col-md-12" style="background-color: #00a65a;margin-bottom: 10px;"><center><label class="control-label">AKIBAT YANG DITIMBULKAN</label></center></div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Kerugian Keuangan Negara (Rp.)</label>
@@ -107,7 +108,7 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <label class="col-sm-2 control-label">Barang Bukti</label>
+                  <label class="col-sm-2 control-label">Rentut Barang Bukti</label>
 
                   <div class="col-sm-10">
                     <input value="<?php echo $data[0]['bb_rentut']; ?>" class="form-control" id="bb_rentut" name="bb_rentut" type="text">
@@ -148,3 +149,30 @@
             </div>
           </div>
   </div>
+  <script type="text/javascript">
+    
+    var rupiah = document.getElementById('rugi');
+    rupiah.addEventListener('keyup', function(e){
+      // tambahkan 'Rp.' pada saat form di ketik
+      // gunakan fungsi formatRupiah() untuk mengubah angka yang di ketik menjadi format angka
+      rupiah.value = formatRupiah(this.value, 'Rp. ');
+    });
+ 
+    /* Fungsi formatRupiah */
+    function formatRupiah(angka, prefix){
+      var number_string = angka.replace(/[^,\d]/g, '').toString(),
+      split       = number_string.split(','),
+      sisa        = split[0].length % 3,
+      rupiah        = split[0].substr(0, sisa),
+      ribuan        = split[0].substr(sisa).match(/\d{3}/gi);
+ 
+      // tambahkan titik jika yang di input sudah menjadi angka ribuan
+      if(ribuan){
+        separator = sisa ? '.' : '';
+        rupiah += separator + ribuan.join('.');
+      }
+ 
+      rupiah = split[1] != undefined ? rupiah + ',' + split[1] : rupiah;
+      return prefix == undefined ? rupiah : (rupiah ? rupiah : '');
+    }
+  </script>

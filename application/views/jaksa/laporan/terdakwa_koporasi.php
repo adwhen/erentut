@@ -66,7 +66,11 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label"> Kebangsaan Korporasi</label>
                   <div class="col-sm-10">
-                    <input value="<?php echo $data[0]['kebangsaan_korporasi']; ?>" class="form-control" id="kebangsaan_korporasi" name="kebangsaan_korporasi" type="text">
+                    <select class="form-control" id="kebangsaan_korporasi" name="kebangsaan_korporasi">
+                        <option value="">Pilih</option>
+                        <option <?php if($data[0]['kebangsaan_korporasi']=='WNI'){echo "selected";} ?>>WNI</option> 
+                        <option <?php if($data[0]['kebangsaan_korporasi']=='WNA'){echo "selected";} ?>>WNA</option> 
+                    </select>  
                   </div>
                 </div>
                 <div class="form-group">

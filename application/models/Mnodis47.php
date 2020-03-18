@@ -19,7 +19,7 @@ class Mnodis47 extends CI_Model {
     }    
     function sopform($proses){
 	   $sopform=array(
-				'id_pegawai'=>$this->session->userdata('username'),
+				'nip'=>$this->session->userdata('username'),
 				'tujuan'	=>$this->input->post('tujuan'),
 				'dari'	=>$this->input->post('dari'),
 				'nomor_sop'	=>$this->input->post('nomor_sop'),
@@ -127,7 +127,6 @@ class Mnodis47 extends CI_Model {
     		'pendidikan_wakil'=>$this->input->post('pendidikan_wakil'),
     	);
     	
-    	return TRUE;
         if($proses==0){
            $this->db->insert('tb_wakilkorporasi',$korporasi);
        }else{
@@ -190,7 +189,7 @@ class Mnodis47 extends CI_Model {
     public function pasalbukti($id,$proses){
     	$data=array(
     		'id_sop'=>$id,
-    		'pasal_bukti' =>$this->input->post('pasal_dakwa')
+    		'pasal_bukti' =>$this->input->post('pasal_bukti')
     	);
     	
     	if($proses==0){
@@ -205,7 +204,6 @@ class Mnodis47 extends CI_Model {
     		'id_sop'=>$id,
     		'barang_bukti' =>$this->input->post('barang_bukti')
     	);
-    	$this->db->insert('tb_barangbukti',$data);
     	if($proses==0){
          $this->db->insert('tb_barangbukti',$data);
        }else{
@@ -221,7 +219,6 @@ class Mnodis47 extends CI_Model {
     		'luka' =>$this->input->post('luka'),
     		'akibat_lain' =>$this->input->post('akibat_lain'),
     	);
-    	$this->db->insert('tb_akibat',$data);
     	if($proses==0){
          $this->db->insert('tb_akibat',$data);
        }else{

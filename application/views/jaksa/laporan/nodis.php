@@ -10,12 +10,19 @@
                   <label class="col-sm-2 control-label">Tujuan</label>
                   <div class="col-sm-10">
                     <select required class="form-control" id="tujuan" name="tujuan">
-                      <option value="">Pilih</option>
-                      <option <?php if($data[0]['tujuan']=='Kejaksaan Negeri Bengkulu'){echo "selected";} ?>>Kejaksaan Negeri Bengkulu</option>
-                      <option <?php if($data[0]['tujuan']=='Kejaksaan Negeri Kepahiang'){echo "selected";} ?>>Kejaksaan Negeri Kepahiang</option>
-                      <option <?php if($data[0]['tujuan']=='Kejaksaan Negeri Bengkulu Selatan'){echo "selected";} ?>>Kejaksaan Negeri Bengkulu Selatan</option>
-                      <option <?php if($data[0]['tujuan']=='Kejaksaan Negeri Bengkulu Tengah'){echo "selected";} ?>>Kejaksaan Negeri Bengkulu Tengah</option>
-                      <option <?php if($data[0]['tujuan']=='Kejaksaan Negeri Seluma'){echo "selected";} ?>>Kejaksaan Negeri Seluma</option>
+
+                      <option value="">PILIH</option>
+                        <option <?php if($data[0]['tujuan']=='KEJAKSAAN NEGERI BENGKULU'){echo "selected";} ?>>KEJAKSAAN NEGERI BENGKULU</option>
+                        <option <?php if($data[0]['tujuan']=='KEJAKSAAN NEGERI BENGKULU UTARA'){echo "selected";} ?>>KEJAKSAAN NEGERI BENGKULU UTARA</option>
+                        <option  <?php if($data[0]['tujuan']=='KEJAKSAAN NEGERI BENGKULU SELATAN'){echo "selected";} ?>>KEJAKSAAN NEGERI BENGKULU SELATAN</option>
+                        <option <?php if($data[0]['tujuan']=='KEJAKSAAN NEGERI BENGKULU TENGAH'){echo "selected";} ?>>KEJAKSAAN NEGERI BENGKULU TENGAH</option>
+                        <option <?php if($data[0]['tujuan']=='KEJAKSAAN NEGERI MUKO-MUKO'){echo "selected";} ?>>KEJAKSAAN NEGERI MUKO-MUKO</option>
+                        <option <?php if($data[0]['tujuan']=='KEJAKSAAN NEGERI KAUR'){echo "selected";} ?>>KEJAKSAAN NEGERI KAUR </option>
+                        <option <?php if($data[0]['tujuan']=='KEJAKSAAN NEGERI SELUMA'){echo "selected";} ?>>KEJAKSAAN NEGERI SELUMA</option>
+                        <option <?php if($data[0]['tujuan']=='KEJAKSAAN NEGERI REJANG LEBONG'){echo "selected";} ?>>KEJAKSAAN NEGERI REJANG LEBONG</option>
+                        <option <?php if($data[0]['tujuan']=='KEJAKSAAN NEGERI LEBONG'){echo "selected";} ?>>KEJAKSAAN NEGERI LEBONG</option>
+                        <option <?php if($data[0]['tujuan']=='KEJAKSAAN NEGERI KEPAHIANG'){echo "selected";} ?>>KEJAKSAAN NEGERI KEPAHIANG</option>
+
                     </select>
                   </div>
                 </div>
@@ -67,12 +74,16 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Terlibat</label>
                   <div class="col-sm-10">
-                    <select class="form-control select2" multiple="multiple" name="terlibat[]" data-placeholder="Jaksa Terlibat (Tidak Perlu Menambahkan Anda, Anda Sudah Terlibat)" style="width: 100%;">
+                    <select class="form-control select2" multiple="multiple" name="terlibat[]" data-placeholder="Masukan Anda Terlebih Dahulu!!" style="width: 100%;">
                       <?php foreach($jaksa as $js){ ?>
+                        <?php if(empty($terlibat)){ ?>
+                          <option <?php if($this->session->userdata('username')==$js['nip']){echo "selected";} ?> value="<?php echo $js['nip']  ?>"><?php echo $js['nama_pegawai'] ?></option>
+                        <?php }else{ ?>
                             <option
                             <?php foreach($terlibat as $tr){if($js['nip']==$tr['nip']){echo "selected";}} ?>
                              value="<?php echo $js['nip']  ?>"><?php echo $js['nama_pegawai'] ?></option>
-                      <?php } ?>
+                      <?php } 
+                      } ?>
                     </select>
                   </div>
                   
