@@ -50,8 +50,11 @@ class Rentut extends CI_Controller {
 
 		if($this->form_validation->run()===false){
 			$id=$this->Mcrypt->decrypt($id);
-			$check = $this->db->get_where('tb_rentut',array('id_sop' => $id,'level' => $this->level))->result_array();
-			$jaksa = $this->db->get_where('tb_rentut',array('id_sop' => $id,'level' => 1))->result_array();
+
+			$check = $this->db->
+								join('tb_sopform','tb_sopform.id_sop=tb_rentut.id_sop')->
+								get_where('tb_rentut',array('tb_rentut.id_sop' => $id,'level' => $this->level))->result_array();
+			$jaksa = $this->db->get_where('tb_rentut',array('tb_rentut.id_sop' => $id,'level' => 1))->result_array();
 			$data=array(
 				'isi'	=> 'kasi/rentut/form',
 				'data'	=> $check,

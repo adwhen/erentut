@@ -11,11 +11,16 @@ class Laporan extends CI_Controller {
 		 	error_reporting(0);
 	}
 	public function index(){
+		$where=array(
+			'tb_terlibat.nip'=>$this->session->userdata('username'),
+			'posisi !='		=> "6"
+		);
 		$data=array(
 				'isi'=> 'jaksa/laporan/index',
+				'judul' => 'LAPORAN RENTUT',
 				'data' => $this->db->order_by('tb_sopform.id_sop','DESC')->
 						join('tb_terlibat','tb_terlibat.id_sop=tb_sopform.id_sop')->
-						get_where('tb_sopform',array('tb_terlibat.nip'=>$this->session->userdata('username')))->result_array()
+						get_where('tb_sopform',$where)->result_array()
 			);
 			$this->load->view('jaksa/snippet/template',$data);
 	}
@@ -97,6 +102,31 @@ class Laporan extends CI_Controller {
 		$this->Mlog->logAktivitas("menambahkan/mengubah sopform 47");
 		$this->session->set_flashdata('msg','Laporan Berhasil Dihapus.');
 		redirect('jaksa/laporan/index');
+	}
+	public function proses($id=null){
+			$uri=$this->Mcrypt->decrypt($id);
+			$check=$this->Mnodis47->tampil($uri);
+			$data=array(
+				'isi'	=> 'jaksa/laporan/form',
+				'jaksa'	=> $this->db->get_where('tb_pegawai',array('nip !='=>'admin'))->result_array(),
+				'data'	=> $check,
+				'proses'=> "disabled"
+			);
+			$this->load->view('jaksa/snippet/template',$data);
+	}
+	public function selesai(){
+		$where=array(
+			'tb_terlibat.nip'=>$this->session->userdata('username'),
+			'posisi'		=> "6"
+		);
+			$data=array(
+				'isi'=> 'jaksa/laporan/selesai',
+				'judul' =>'LAPORAN RENTUT SELESAI',
+				'data' => $this->db->order_by('tb_sopform.id_sop','DESC')->
+						join('tb_terlibat','tb_terlibat.id_sop=tb_sopform.id_sop')->
+						get_where('tb_sopform',$where)->result_array()
+			);
+			$this->load->view('jaksa/snippet/template',$data);
 	}
 	
 }

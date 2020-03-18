@@ -9,7 +9,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tujuan</label>
                   <div class="col-sm-10">
-                    <select required class="form-control" id="tujuan" name="tujuan">
+                    <select <?php echo $proses ?> required class="form-control" id="tujuan" name="tujuan">
 
                       <option value="">PILIH</option>
                         <option <?php if($data[0]['tujuan']=='KEJAKSAAN NEGERI BENGKULU'){echo "selected";} ?>>KEJAKSAAN NEGERI BENGKULU</option>
@@ -27,16 +27,16 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <label class="col-sm-2 control-label">Dari</label>
+                  <label class="col-sm-2 control-label">Pelapor</label>
 
                   <div class="col-sm-4">
-                    <input class="form-control" id="dari" name="dari" type="text" readonly="" value="<?php if(empty($data[0]['dari'])){echo $this->session->userdata('keterangan_pegawai');}else{
+                    <input <?php echo $proses ?> class="form-control" id="dari" name="dari" type="text" readonly="" value="<?php if(empty($data[0]['dari'])){echo $this->session->userdata('keterangan_pegawai');}else{
                       echo $data[0]['dari'];} ?>">
                   </div>
                   <label class="col-sm-1 control-label">Nomor</label>
 
                   <div class="col-sm-5">
-                    <input required class="form-control" id="nomor_sop" name="nomor_sop" type="text" type="text" value="<?php if(empty($data[0]['nomor_sop'])){echo "-";}else{
+                    <input <?php echo $proses ?> required class="form-control" id="nomor_sop" name="nomor_sop" type="text" type="text" value="<?php if(empty($data[0]['nomor_sop'])){echo "-";}else{
                       echo $data[0]['nomor_sop'];} ?>">
                   </div>
                 </div>
@@ -44,14 +44,14 @@
                   <label class="col-sm-2 control-label">Perihal</label>
 
                   <div class="col-sm-10">
-                    <input required  class="form-control" id="perihal" name="perihal" type="text" value="<?php echo $data[0]['perihal'] ?>"  >
+                    <input <?php echo $proses ?> required  class="form-control" id="perihal" name="perihal" type="text" value="<?php echo $data[0]['perihal'] ?>"  >
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Sifat</label>
 
                   <div class="col-sm-10">
-                    <select required  class="form-control" id="sifat" name="sifat">
+                    <select <?php echo $proses ?> required  class="form-control" id="sifat" name="sifat">
                       <option value="">Pilih</option>
                       <option <?php if($data[0]['sifat']=='Rahasia'){echo "selected";} ?>>Rahasia</option>
                     </select>
@@ -60,7 +60,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Terdakwa</label>
                   <div class="col-sm-4">
-                    <select required  class="form-control" id="terdakwa" name="terdakwa">
+                    <select <?php echo $proses ?> required  class="form-control" id="terdakwa" name="terdakwa">
                       <option <?php if($data[0]['terdakwa']=='Perorangan'){echo "selected";} ?>>Perorangan</option>
                       <option <?php if($data[0]['terdakwa']=='Koporasi'){echo "selected";} ?>>Koporasi</option>
                     </select>
@@ -68,13 +68,13 @@
                   <label class="col-sm-1 control-label">Tanggal</label>
 
                   <div class="col-sm-5">
-                    <input required  class="form-control" id="tanggal" name="tanggal" type="date" value="<?php if(empty($data[0]['tanggal'])){echo date('Y-m-d'); }else{echo $data[0]['tanggal'];} ?>"  >
+                    <input <?php echo $proses ?> required  class="form-control" id="tanggal" name="tanggal" type="date" value="<?php if(empty($data[0]['tanggal'])){echo date('Y-m-d'); }else{echo $data[0]['tanggal'];} ?>"  >
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Terlibat</label>
                   <div class="col-sm-10">
-                    <select class="form-control select2" multiple="multiple" name="terlibat[]" data-placeholder="Masukan Anda Terlebih Dahulu!!" style="width: 100%;">
+                    <select <?php echo $proses ?> class="form-control select2" multiple="multiple" name="terlibat[]" data-placeholder="Masukan Anda Terlebih Dahulu!!" style="width: 100%;">
                       <?php foreach($jaksa as $js){ ?>
                         <?php if(empty($terlibat)){ ?>
                           <option <?php if($this->session->userdata('username')==$js['nip']){echo "selected";} ?> value="<?php echo $js['nip']  ?>"><?php echo $js['nama_pegawai'] ?></option>

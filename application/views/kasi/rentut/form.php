@@ -60,7 +60,7 @@
           </div>
           <!-- /.box-body -->
           <div class="box-footer">
-            <button class="btn btn-success pull-right" type="submit">Simpan</button>
+            <button  <?php if($data[0]['posisi']>3){echo "disabled";} ?> class="btn btn-success pull-right" type="submit">Simpan</button>
           </div>
         </div>
         <!-- /.tab-pane -->

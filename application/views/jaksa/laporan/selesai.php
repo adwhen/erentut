@@ -48,20 +48,17 @@
                 <td><?php echo $dt['tanggal'];?></td>
                 <td>
                   <center>
-                    <?php if($dt['posisi']>2){ ?>
-                        <a href="<?php echo base_url('jaksa/laporan/proses/'.$this->Mcrypt->encrypt($dt['id_sop']));?>">
-                            <button class="btn btn-warning" title="Proses">Proses</button>
-                          </a>
-                    <?php }else{ ?>
-                       <div class="tooltip-demo">
-                          <a href="<?php echo base_url('jaksa/laporan/tambah/'.$this->Mcrypt->encrypt($dt['id_sop']));?>">
-                            <button class="btn btn-info" title="Ubah"><i class="fa fa-pencil"></i></button>
-                          </a>
-                          <a href="<?php echo base_url('jaksa/laporan/hapus/'.$this->Mcrypt->encrypt($dt['id_sop']));?>">
-                          <button  class="btn btn-danger" title="Hapus"><i class="fa fa-trash"></i></button>
-                          </a>
-                      </div>
-                    <?php } ?>
+                     <div class="tooltip-demo">
+                      <a href="<?php echo base_url('kajati/rentut/lihatForm/47');?>">
+                      <button  class="btn btn-primary" title="Hapus"><i class="fa fa-file"></i>&nbsp;&nbsp;FORM 47</button>
+                      </a>
+                      <a href="<?php echo base_url('kajati/rentut/lihatForm/48');?>">
+                      <button  class="btn btn-primary" title="Hapus"><i class="fa fa-file"></i>&nbsp;&nbsp;FORM 48</button>
+                      </a>
+                      <a href="<?php echo base_url('kajati/rentut/lihatForm/surat');?>">
+                      <button  class="btn btn-primary" title="Hapus"><i class="fa fa-file"></i>&nbsp;&nbsp;SURAT</button>
+                      </a>
+                    </div>
                   </center>
                 </td>
               </tr>

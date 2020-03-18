@@ -61,7 +61,7 @@
           </div>
           <!-- /.box-body -->
           <div class="box-footer">
-            <button class="btn btn-success pull-right" type="submit">Simpan</button>
+            <button <?php if($data[0]['posisi']>4){echo "disabled";} ?> class="btn btn-success pull-right" type="submit">Simpan</button>
           </div>
         </div>
         <div class="tab-pane" id="tab_2">

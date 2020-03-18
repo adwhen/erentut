@@ -29,7 +29,7 @@
           </a>
         </li>
         <li style="font-size: 12px;">
-          <a href="#">
+          <a href="<?php echo base_url('jaksa/laporan/selesai');?>">
             <i class="fa fa-check-square" aria-hidden="true"></i><span>Laporan Selesai</span>
           </a>
         </li>
