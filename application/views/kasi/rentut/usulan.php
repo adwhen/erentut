@@ -43,7 +43,7 @@
                 <td><?php echo $dt['dari'];?></td>
                 <td><?php echo $dt['pidana_pokok'];?></td>
                 <td><?php echo $dt['pidana_tambahan'];?></td>
-                <td><?php echo posisi($dt['posisi']);?></td>
+                <td><?php echo posisi($dt['level']);?></td>
                 <td>
                   <center>
                     <div class="tooltip-demo">

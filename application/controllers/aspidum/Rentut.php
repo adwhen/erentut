@@ -29,7 +29,7 @@ class Rentut extends CI_Controller {
 				'isi'=> 'aspidum/rentut/usulan',
 				'data' => $this->db->order_by('tb_rentut.id_sop','DESC')->
 						join('tb_sopform', 'tb_rentut.id_sop=tb_sopform.id_sop','LEFT')->
-						where('tb_rentut.level', $this->level)->
+						where('tb_rentut.level <=', $this->level)->
 						get('tb_rentut')->result_array()
 		);
 		$data['jumlah'] = 0;

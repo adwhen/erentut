@@ -27,8 +27,11 @@ class Rentut extends CI_Controller {
 		$jumlah = $this->db->order_by('id_sop','DESC')->get_where('tb_sopform',array('posisi'=>$this->session->userdata('level')))->result_array();
 		$data=array(
 				'isi'=> 'kajati/rentut/usulan',
-				'data' => $this->db->order_by('id_sop','DESC')->
-						get('tb_sopform')->result_array()
+				'data' =>  $this->db->order_by('tb_rentut.id_sop','DESC')->
+						join('tb_sopform', 'tb_rentut.id_sop=tb_sopform.id_sop','LEFT')->
+						where('tb_sopform.tujuan', $this->session->userdata('keterangan_pegawai'))->
+						where('tb_rentut.level <=', $this->level)->
+						get('tb_rentut')->result_array()
 		);
 		$data['jumlah'] = 0;
 		if(!empty($data)){

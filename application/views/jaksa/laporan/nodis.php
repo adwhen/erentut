@@ -37,7 +37,7 @@
 
                   <div class="col-sm-5">
                     <input required class="form-control" id="nomor_sop" name="nomor_sop" type="text" type="text" value="<?php if(empty($data[0]['nomor_sop'])){echo "-";}else{
-                      echo $data[0]['dari'];} ?>">
+                      echo $data[0]['nomor_sop'];} ?>">
                   </div>
                 </div>
                 <div class="form-group">
