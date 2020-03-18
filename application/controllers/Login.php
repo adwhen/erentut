@@ -30,14 +30,22 @@ class Login extends CI_Controller {
 					'username' 				=>$this->input->post('username'),
 					'nama_pegawai'			=>$check[0]['nama_pegawai'],
 					'keterangan_pegawai'	=>$check[0]['keterangan_pegawai'],
-					'nama_pegawai'			=>$check[0]['nama_pegawai'],
+					'level'					=>$check[0]['level']
 				);
 				$this->session->set_userdata($session);
 				$this->Mlog->logAktivitas('Login ke sistem');
 				if($session['username']=='admin'){
 					redirect('Admin/beranda');
-				}else{
+				}elseif($session['level']==1){
 					redirect('jaksa/beranda');
+				}elseif($session['level']==2){
+					redirect('kasi/beranda');
+				}elseif($session['level']==3){
+					redirect('kajari/beranda');
+				}elseif($session['level']==4){
+					redirect('aspidum/beranda');
+				}elseif($session['level']==5){
+					redirect('kajati/beranda');
 				}
 			}
 		}

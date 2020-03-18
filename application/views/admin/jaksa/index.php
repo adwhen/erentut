@@ -75,6 +75,7 @@
       $('#level5').attr('selected','true')
     }
 
+    $('#ktb').removeAttr('selected')
     $('#knb').removeAttr('selected')
     $('#knbu').removeAttr('selected')
     $('#knbs').removeAttr('selected')
@@ -113,6 +114,8 @@
       $('#knl').attr('selected','true')
     }else if(keterangan_pegawai=="KEJAKSAAN NEGERI KEPAHIANG"){
       $('#knke').attr('selected','true')
+    }else if(keterangan_pegawai=="KEJAKSAAN TINGGI BENGKULU"){
+      $('#ktb').attr('selected','true')
     }
   }
   function hapus(id,no) {
@@ -169,6 +172,7 @@
                       <div class="col-md-9">
                        <select class="form-control" name="keterangan_pegawai" required>
                         <option value="">PILIH</option>
+                        <option >KEJAKSAAN TINGGI BENGKULU</option>
                         <option >KEJAKSAAN NEGERI BENGKULU</option>
                         <option >KEJAKSAAN NEGERI BENGKULU UTARA</option>
                         <option  >KEJAKSAAN NEGERI BENGKULU SELATAN</option>
@@ -263,6 +267,7 @@
                       <div class="col-md-9">
                        <select class="form-control" name="keterangan_pegawai" required>
                         <option value="">PILIH</option>
+                        <option id="ktb" >KEJAKSAAN TINGGI BENGKULU</option>
                         <option id="knb" >KEJAKSAAN NEGERI BENGKULU</option>
                         <option id="knbu" >KEJAKSAAN NEGERI BENGKULU UTARA</option>
                         <option id="knbs" >KEJAKSAAN NEGERI BENGKULU SELATAN</option>
