@@ -13,8 +13,9 @@ class Laporan extends CI_Controller {
 	public function index(){
 		$data=array(
 				'isi'=> 'jaksa/laporan/index',
-				'data' => $this->db->order_by('id_sop','DESC')->
-						get_where('tb_sopform',array('id_pegawai'=>$this->session->userdata('username')))->result_array()
+				'data' => $this->db->order_by('tb_sopform.id_sop','DESC')->
+						join('tb_terlibat','tb_terlibat.id_sop=tb_sopform.id_sop')->
+						get_where('tb_sopform',array('tb_terlibat.nip'=>$this->session->userdata('username')))->result_array()
 			);
 			$this->load->view('jaksa/snippet/template',$data);
 	}
@@ -42,9 +43,11 @@ class Laporan extends CI_Controller {
 			$uri['id_sop']=$this->Mcrypt->decrypt($id);
 			$check=$this->db->get_where('tb_sopform',$uri)->result_array();
 			if(count($check)>0){
-				echo $proses=1; #1 edit
+				$proses=1; #1 edit
+				$this->Mlog->logAktivitas("mengubah sopform 47");
 			}else{
-				echo $proses=0; #0 tambah
+				$proses=0; #0 tambah
+				$this->Mlog->logAktivitas("menambakan sopform 47");
 			}
 			
 			$id_sop=$this->Mnodis47->sopform($proses);
@@ -64,7 +67,8 @@ class Laporan extends CI_Controller {
 			$this->Mnodis47->keadaan($id_sop,$proses);
 			$this->Mnodis47->ukur($id_sop,$proses);
 			$this->Mnodis47->rentut($id_sop,$proses);
-			$this->Mlog->logAktivitas("menambahkan/mengubah sopform 47");
+			$this->Mupload->uploadFotoOrang($id_sop);
+			$this->Mupload->uploadFotoKoporasi($id_sop);
 			$this->session->set_flashdata('msg','Laporan Berhasil Ditambahkan.');
 		redirect('jaksa/laporan/index');
 

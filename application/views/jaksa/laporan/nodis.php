@@ -72,12 +72,16 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Terlibat</label>
                   <div class="col-sm-10">
-                    <select class="form-control select2" multiple="multiple" name="terlibat[]" data-placeholder="Jaksa Terlibat (Tidak Perlu Menambahkan Anda, Anda Sudah Terlibat)" style="width: 100%;">
+                    <select class="form-control select2" multiple="multiple" name="terlibat[]" data-placeholder="Masukan Anda Terlebih Dahulu!!" style="width: 100%;">
                       <?php foreach($jaksa as $js){ ?>
+                        <?php if(empty($terlibat)){ ?>
+                          <option <?php if($this->session->userdata('username')==$js['nip']){echo "selected";} ?> value="<?php echo $js['nip']  ?>"><?php echo $js['nama_pegawai'] ?></option>
+                        <?php }else{ ?>
                             <option
                             <?php foreach($terlibat as $tr){if($js['nip']==$tr['nip']){echo "selected";}} ?>
                              value="<?php echo $js['nip']  ?>"><?php echo $js['nama_pegawai'] ?></option>
-                      <?php } ?>
+                      <?php } 
+                      } ?>
                     </select>
                   </div>
                   

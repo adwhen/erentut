@@ -19,7 +19,7 @@ class Mnodis47 extends CI_Model {
     }    
     function sopform($proses){
 	   $sopform=array(
-				'id_pegawai'=>$this->session->userdata('username'),
+				'nip'=>$this->session->userdata('username'),
 				'tujuan'	=>$this->input->post('tujuan'),
 				'dari'	=>$this->input->post('dari'),
 				'nomor_sop'	=>$this->input->post('nomor_sop'),

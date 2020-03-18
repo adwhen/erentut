@@ -11,18 +11,11 @@ class Mupload extends CI_Model {
 		        if($this->upload->do_upload($post)){
 
 		            $basePath=base_url('asset/file/'.$this->upload->file_name);
-		            // $simpan = array(
-		            //     'url_file'  => $basePath,
-		            //     'nama_file' => $nama,
-		            //     'ket_file'  => "sementara",
-		            //     'tgl_file'  => date('Y-m-d'),
-		            //     'kat_file' =>'pembinaan'
-		            // );
 
 		        }
 		        return $basePath;
         }
-        function uploadFoto($post){
+        function uploadFotoOrang($id_sop){
                 $nmfile="foto_".time();
 		        $config['upload_path']          = 'asset/gambar/foto';
 		        $config['allowed_types']        = 'jpg|jpeg|png';
@@ -31,8 +24,24 @@ class Mupload extends CI_Model {
         		$config['max_height']           = 7680;
 		        $config['file_name']            = $nmfile;
 		        $this->load->library('upload', $config);
-		        if($this->upload->do_upload($post)){
+		        if($this->upload->do_upload('foto_orang')){
 		            $basePath=base_url('asset/file/'.$this->upload->file_name);
+		            $this->db->update('tb_orang',array('foto_orang'=>$this->upload->file_name),array('id_sop'=>$id_sop));
+		        }
+		        return $basePath;
+        }
+        function uploadFotoKoporasi($id_sop){
+        	 $nmfile="foto_".time();
+		        $config['upload_path']          = 'asset/gambar/foto';
+		        $config['allowed_types']        = 'jpg|jpeg|png';
+		        $config['max_size']             = 1048576;
+		        $config['max_width']            = 10240;
+        		$config['max_height']           = 7680;
+		        $config['file_name']            = $nmfile;
+		        $this->load->library('upload', $config);
+		        if($this->upload->do_upload('foto_kendali')){
+		            $basePath=base_url('asset/file/'.$this->upload->file_name);
+		            $this->db->update('tb_kendalikorporasi',array('foto_kendali'=>$this->upload->file_name),array('id_sop'=>$id_sop));
 		        }
 		        return $basePath;
         }
