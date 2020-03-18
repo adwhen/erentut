@@ -1,6 +1,6 @@
 <div class="content-wrapper">
-  <br>
-  <?php echo validation_errors(); ?>
+<br>
+<?php echo validation_errors(); ?>
 <?php  echo form_open_multipart('jaksa/laporan/tambah/'.$this->uri->segment(4),array('class'=>"form-horizontal",'method'=>'POST','id'=>"form_nodis")); ?>
 <?php $this->load->view('jaksa/laporan/nodis');?>
 <?php $this->load->view('jaksa/laporan/terdakwa_perorangan');?>

@@ -70,7 +70,7 @@ class Laporan extends CI_Controller {
 			$this->Mupload->uploadFotoOrang($id_sop);
 			$this->Mupload->uploadFotoKoporasi($id_sop);
 			$this->session->set_flashdata('msg','Laporan Berhasil Ditambahkan.');
-		redirect('jaksa/laporan/index');
+			redirect('jaksa/laporan/index');
 
 
 		}

@@ -26,7 +26,8 @@ class Mnodis47 extends CI_Model {
 				'sifat'	=>$this->input->post('sifat'),
 				'tanggal'	=>$this->input->post('tanggal'),
 				'terdakwa'	=>$this->input->post('terdakwa'),
-                'perihal'   =>$this->input->post('perihal')
+                'perihal'   =>$this->input->post('perihal'),
+                'posisi'     => 2
 			);
        if($proses==0){
             $this->db->insert('tb_sopform',$sopform);
@@ -262,6 +263,7 @@ class Mnodis47 extends CI_Model {
     		'biaya_perkara' =>$this->input->post('biaya_perkara'),
     		'saran' =>$this->input->post('saran'),
     		'pendapat' =>$this->input->post('pendapat'),
+            'level' => 1
 
     	);
     	if($proses==0){
