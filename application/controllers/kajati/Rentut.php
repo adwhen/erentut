@@ -29,8 +29,7 @@ class Rentut extends CI_Controller {
 				'isi'=> 'kajati/rentut/usulan',
 				'data' =>  $this->db->order_by('tb_rentut.id_sop','DESC')->
 						join('tb_sopform', 'tb_rentut.id_sop=tb_sopform.id_sop','LEFT')->
-						where('tb_sopform.tujuan', $this->session->userdata('keterangan_pegawai'))->
-						where('tb_rentut.level <=', $this->level)->
+						where('tb_rentut.level', $this->level)->
 						get('tb_rentut')->result_array()
 		);
 		$data['jumlah'] = 0;
@@ -51,9 +50,17 @@ class Rentut extends CI_Controller {
 		if($this->form_validation->run()===false){
 			$id=$this->Mcrypt->decrypt($id);
 			$check=$this->db->get_where('tb_rentut',array('id_sop' => $id,'level' => $this->level))->result_array();
+			$jaksa = $this->db->get_where('tb_rentut',array('id_sop' => $id,'level' => 1))->result_array();
+			$kasi = $this->db->get_where('tb_rentut',array('id_sop' => $id,'level' => 2))->result_array();
+			$kajari = $this->db->get_where('tb_rentut',array('id_sop' => $id,'level' => 3))->result_array();
+			$aspidum = $this->db->get_where('tb_rentut',array('id_sop' => $id,'level' => 4))->result_array();
 			$data=array(
 				'isi'	=> 'kajati/rentut/form',
 				'data'	=> $check,
+				'jaksa' => $jaksa,
+				'kasi' => $kasi,
+				'kajari' => $kajari,
+				'aspidum' => $aspidum
 			);
 			$this->load->view('kajati/snippet/template',$data);
 
