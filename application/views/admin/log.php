@@ -7,7 +7,7 @@
         <div class="col-xs-12">
           <ol class="breadcrumb" style="font-size: 15px">
             <li><a href="<?php echo base_url('admin/beranda');?>">Admin</a></li>
-            <li class="active"> Manajemen Jaksa/User</li>
+            <li class="active"> Log Aktivitas</li>
           </ol>
         </div>
         <!-- /.col -->

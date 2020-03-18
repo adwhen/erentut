@@ -20,12 +20,17 @@
         </li>
         <li style="font-size: 12px;">
           <a href="<?php echo base_url('jaksa/laporan/tambah');?>">
-            <i class="fa fa-user" aria-hidden="true"></i><span>Lapor</span>
+            <i class="fa fa-file-text" aria-hidden="true"></i><span>Lapor</span>
           </a>
         </li>
         <li style="font-size: 12px;">
           <a href="<?php echo base_url('jaksa/laporan/index');?>">
-            <i class="fa fa-user" aria-hidden="true"></i><span>Laporan</span>
+            <i class="fa fa-file-text-o" aria-hidden="true"></i><span>Laporan</span>
+          </a>
+        </li>
+        <li style="font-size: 12px;">
+          <a href="#">
+            <i class="fa fa-check-square" aria-hidden="true"></i><span>Laporan Selesai</span>
           </a>
         </li>
             
