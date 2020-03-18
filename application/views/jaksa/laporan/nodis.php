@@ -10,9 +10,17 @@
                   <label class="col-sm-2 control-label">Tujuan</label>
                   <div class="col-sm-10">
                     <select required class="form-control" id="tujuan" name="tujuan">
-                      <option value="">Pilih</option>
-                      <option <?php if($data[0]['tujuan']=='Kejaksaan Negeri Bengkulu'){echo "selected";} ?>>Kejaksaan Negeri Bengkulu</option>
-                      <option <?php if($data[0]['tujuan']=='Kejaksaan Negeri Kepahiang'){echo "selected";} ?>>Kejaksaan Negeri Kepahiang</option>
+                      <option value="">PILIH</option>
+                        <option <?php if($data[0]['tujuan']=='KEJAKSAAN NEGERI BENGKULU'){echo "selected";} ?>>KEJAKSAAN NEGERI BENGKULU</option>
+                        <option <?php if($data[0]['tujuan']=='KEJAKSAAN NEGERI BENGKULU UTARA'){echo "selected";} ?>>KEJAKSAAN NEGERI BENGKULU UTARA</option>
+                        <option  <?php if($data[0]['tujuan']=='KEJAKSAAN NEGERI BENGKULU SELATAN'){echo "selected";} ?>>KEJAKSAAN NEGERI BENGKULU SELATAN</option>
+                        <option <?php if($data[0]['tujuan']=='KEJAKSAAN NEGERI BENGKULU TENGAH'){echo "selected";} ?>>KEJAKSAAN NEGERI BENGKULU TENGAH</option>
+                        <option <?php if($data[0]['tujuan']=='KEJAKSAAN NEGERI MUKO-MUKO'){echo "selected";} ?>>KEJAKSAAN NEGERI MUKO-MUKO</option>
+                        <option <?php if($data[0]['tujuan']=='KEJAKSAAN NEGERI KAUR'){echo "selected";} ?>>KEJAKSAAN NEGERI KAUR </option>
+                        <option <?php if($data[0]['tujuan']=='KEJAKSAAN NEGERI SELUMA'){echo "selected";} ?>>KEJAKSAAN NEGERI SELUMA</option>
+                        <option <?php if($data[0]['tujuan']=='KEJAKSAAN NEGERI REJANG LEBONG'){echo "selected";} ?>>KEJAKSAAN NEGERI REJANG LEBONG</option>
+                        <option <?php if($data[0]['tujuan']=='KEJAKSAAN NEGERI LEBONG'){echo "selected";} ?>>KEJAKSAAN NEGERI LEBONG</option>
+                        <option <?php if($data[0]['tujuan']=='KEJAKSAAN NEGERI KEPAHIANG'){echo "selected";} ?>>KEJAKSAAN NEGERI KEPAHIANG</option>
                     </select>
                   </div>
                 </div>

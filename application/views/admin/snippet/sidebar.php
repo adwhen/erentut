@@ -27,6 +27,11 @@
             <i class="fa fa-user" aria-hidden="true"></i><span>Manajemen Jaksa/User</span>
           </a>
         </li>
+        <li style="font-size: 12px;">
+          <a href="<?php echo base_url('admin/log');?>">
+            <i class="fa fa-user" aria-hidden="true"></i><span>Log Aktivitas</span>
+          </a>
+        </li>
             
       </ul>
     </section>
