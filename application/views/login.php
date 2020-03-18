@@ -60,7 +60,7 @@
     <br>
     
     <footer id="footer">
-        <div class="footer-one footer-widgets bg-success" style="padding-top:10px; padding-bottom:10px">
+        <div class="footer-one footer-widgets bg-success fixed-bottom" style="padding-top:10px; padding-bottom:10px">
             <div class="container">
                 <div class="col-md-12 text-white text-center">
                     <p style="margin-bottom:unset; font-size:13px">Copyright © 2020 Website Resmi Kejaksaan Tinggi Bengkulu. All Right Reserved.</p>

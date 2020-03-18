@@ -13,6 +13,9 @@
                       <option value="">Pilih</option>
                       <option <?php if($data[0]['tujuan']=='Kejaksaan Negeri Bengkulu'){echo "selected";} ?>>Kejaksaan Negeri Bengkulu</option>
                       <option <?php if($data[0]['tujuan']=='Kejaksaan Negeri Kepahiang'){echo "selected";} ?>>Kejaksaan Negeri Kepahiang</option>
+                      <option <?php if($data[0]['tujuan']=='Kejaksaan Negeri Bengkulu Selatan'){echo "selected";} ?>>Kejaksaan Negeri Bengkulu Selatan</option>
+                      <option <?php if($data[0]['tujuan']=='Kejaksaan Negeri Bengkulu Tengah'){echo "selected";} ?>>Kejaksaan Negeri Bengkulu Tengah</option>
+                      <option <?php if($data[0]['tujuan']=='Kejaksaan Negeri Seluma'){echo "selected";} ?>>Kejaksaan Negeri Seluma</option>
                     </select>
                   </div>
                 </div>
