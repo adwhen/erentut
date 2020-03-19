@@ -227,19 +227,28 @@ class Mnodis47 extends CI_Model {
             $this->db->update('tb_akibat',$data,$uri);
        }
     }
-    public function keadaan($id,$proses){
-    	$data=array(
-    		'id_sop'=>$id,
-    		'berat' =>$this->input->post('berat'),
-    		'ringan' =>$this->input->post('ringan'),
-
-    	);
-    	if($proses==0){
-         $this->db->insert('tb_keadaan',$data);
-       }else{
-            $uri['id_sop']=$this->Mcrypt->decrypt($this->uri->segment(4));
-            $this->db->update('tb_keadaan',$data,$uri);
-       }    
+    public function keadaan($id){
+        $this->db->delete('tb_keadaan',array('id_sop'=>$id));
+        $berat=$this->input->post('berat');
+        $ringan=$this->input->post('ringan');
+        if(count($this->input->post('berat'))>=count($this->input->post('ringan'))){
+            $keadaan=$this->input->post('berat');
+        }else{
+            $keadaan=$this->input->post('ringan');
+        }
+        $no=0;
+        foreach($keadaan as $kd){
+            $data=array(
+                'id_sop'=>$id,
+                'berat' =>$berat[$no],
+                'ringan' =>$ringan[$no],
+            );
+            if(empty($berat[$no]) && empty($ringan[$no])){
+                continue;
+            }
+            $this->db->insert('tb_keadaan',$data);  
+            $no++;
+        } 
    }
     public function ukur($id,$proses){
     	$data=array(

@@ -29,7 +29,7 @@
                   <label class="col-sm-2 control-label">Barang Bukti</label>
 
                   <div class="col-sm-10">
-                    <textarea <?php echo $proses ?> class="form-control" id="barang_bukti" name="barang_bukti" type="text"  ></textarea>
+                    <textarea <?php echo $proses ?> class="form-control" id="barang_bukti" name="barang_bukti" type="text"  ><?php echo $data[0]['barang_bukti'] ?></textarea>
                   </div>
                 </div>
 
@@ -64,18 +64,26 @@
                 </div>
                 <div class="col-md-12" style="background-color: #00a65a;margin-bottom: 10px;"><center><label class="control-label">KEADANAAN YANG MEMPENGARUHI TUNTUTAN</label></center></div>
                 <div class="form-group">
-                  <label class="col-sm-2 control-label">Yang Memberatkan</label>
+                  <label class="col-sm-2 control-label">Yang Memberatkan <button type="button" onclick="memberatkan()">+</button></label>
 
-                  <div class="col-sm-10">
-                    <textarea <?php echo $proses ?> class="form-control" id="berat" name="berat" type="text"><?php echo $data[0]['berat']; ?></textarea>
+                  <div class="col-sm-10" id="memberatkan">
+                   <?php foreach($keadaan as $kd){ 
+                      if(!empty($kd['berat'])){?>
+                        <input <?php echo $proses ?> class="form-control" id="berat" name="berat[]" type="text" value="<?php echo $kd['berat']; ?>">
+                      <?php }
+                      } ?>
                   </div>
                 </div>
                 <div class="form-group">
-                  <label class="col-sm-2 control-label">Yang Meringankan</label>
-
-                  <div class="col-sm-10">
-                    <textarea <?php echo $proses ?> class="form-control" id="ringan" name="ringan" type="text"><?php echo $data[0]['ringan']; ?></textarea>
+                  <label class="col-sm-2 control-label">Yang Meringankan <button type="button" onclick="meringankan()">+</button></label>
+                  <div class="col-sm-10" id="meringankan">
+                    <?php foreach($keadaan as $kd){
+                          if(!empty($kd['ringan'])){ ?>
+                      <input <?php echo $proses ?> class="form-control" id="ringan" name="ringan[]" type="text" value="<?php echo $kd['ringan']; ?>">
+                          <?php }
+                        } ?>
                   </div>
+                  
                 </div>
                 <div class="col-md-12" style="background-color: #00a65a;margin-bottom: 10px;"><center><label class="control-label"></label></center></div>
                 <div class="form-group">
@@ -174,5 +182,13 @@
  
       rupiah = split[1] != undefined ? rupiah + ',' + split[1] : rupiah;
       return prefix == undefined ? rupiah : (rupiah ? rupiah : '');
+    }
+  </script>
+  <script type="text/javascript">
+    function memberatkan() {
+      $('#memberatkan').append('<input class="form-control" id="berat" name="berat[]" type="text" >')
+    }
+    function meringankan(){
+      $('#meringankan').append('<input  class="form-control" id="ringan" name="ringan[]" type="text" >')
     }
   </script>

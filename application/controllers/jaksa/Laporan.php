@@ -42,6 +42,7 @@ class Laporan extends CI_Controller {
 				'isi'	=> 'jaksa/laporan/form',
 				'jaksa'	=> $this->db->get_where('tb_pegawai',array('nip !='=>'admin'))->result_array(),
 				'data'	=>$check,
+				'keadaan' =>$this->db->get_where('tb_keadaan',array('id_sop'=>$uri))->result_array(),
 			);
 			$this->load->view('jaksa/snippet/template',$data);
 
@@ -56,7 +57,7 @@ class Laporan extends CI_Controller {
 				$this->Mlog->logAktivitas("menambakan sopform 47");
 			}
 			
-			$id_sop=$this->Mnodis47->sopform($proses);
+			echo $id_sop=$this->Mnodis47->sopform($proses);
 
 			$this->Mnodis47->terlibat($id_sop,$proses);
 
@@ -70,7 +71,7 @@ class Laporan extends CI_Controller {
 			$this->Mnodis47->kasus($id_sop,$proses);
 			$this->Mnodis47->barangbukti($id_sop,$proses);
 			$this->Mnodis47->akibat($id_sop,$proses);	
-			$this->Mnodis47->keadaan($id_sop,$proses);
+			$this->Mnodis47->keadaan($id_sop);
 			$this->Mnodis47->ukur($id_sop,$proses);
 			$this->Mnodis47->rentut($id_sop,$proses);
 			$this->Mupload->uploadFotoOrang($id_sop);
