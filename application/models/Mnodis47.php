@@ -27,6 +27,7 @@ class Mnodis47 extends CI_Model {
 				'tanggal'	=>$this->input->post('tanggal'),
 				'terdakwa'	=>$this->input->post('terdakwa'),
                 'perihal'   =>$this->input->post('perihal'),
+                'lampiran'   =>$this->input->post('lampiran'),
                 'posisi'     => 2
 			);
        if($proses==0){

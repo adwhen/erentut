@@ -49,13 +49,13 @@
                 <td>
                   <center>
                     <div class="tooltip-demo">
-                      <a href="<?php echo base_url('kajati/rentut/lihatForm/47');?>">
+                      <a href="<?php echo base_url('kajati/rentut/lihatForm/47/'.$this->Mcrypt->encrypt($dt['id_sop']));?>" target="_blank">
                       <button  class="btn btn-primary" title="Hapus"><i class="fa fa-file"></i>&nbsp;&nbsp;FORM 47</button>
                       </a>
-                      <a href="<?php echo base_url('kajati/rentut/lihatForm/48');?>">
+                      <a href="<?php echo base_url('kajati/rentut/lihatForm/48/'.$this->Mcrypt->encrypt($dt['id_sop']));?>" target="_blank">
                       <button  class="btn btn-primary" title="Hapus"><i class="fa fa-file"></i>&nbsp;&nbsp;FORM 48</button>
                       </a>
-                      <a href="<?php echo base_url('kajati/rentut/lihatForm/surat');?>">
+                      <a href="<?php echo base_url('kajati/rentut/lihatForm/surat/'.$this->Mcrypt->encrypt($dt['id_sop']));?>" target="_blank">
                       <button  class="btn btn-primary" title="Hapus"><i class="fa fa-file"></i>&nbsp;&nbsp;SURAT</button>
                       </a>
                     </div>

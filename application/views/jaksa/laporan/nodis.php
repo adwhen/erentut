@@ -48,6 +48,13 @@
                   </div>
                 </div>
                 <div class="form-group">
+                  <label class="col-sm-2 control-label">Lampiran</label>
+
+                  <div class="col-sm-10">
+                    <input required  class="form-control" id="lampiran" name="lampiran" type="text" value="<?php echo $data[0]['lampiran'] ?>"  >
+                  </div>
+                </div>
+                <div class="form-group">
                   <label class="col-sm-2 control-label">Sifat</label>
 
                   <div class="col-sm-10">
