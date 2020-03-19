@@ -14,6 +14,8 @@ class Mnodis47 extends CI_Model {
                               join('tb_keadaan','tb_keadaan.id_sop=tb_sopform.id_sop','LEFT')->
                               join('tb_ukur','tb_ukur.id_sop=tb_sopform.id_sop','LEFT')->
                               join('tb_rentut','tb_rentut.id_sop=tb_sopform.id_sop','LEFT')->
+                              join('tb_hasil','tb_hasil.id_sop=tb_sopform.id_sop','LEFT')->
+                              join('tb_laporan','tb_laporan.id_sop=tb_sopform.id_sop','LEFT')->
                               get_where('tb_sopform',array('tb_sopform.id_sop'=>$id))->result_array();
         return $query;
     }    
@@ -281,6 +283,32 @@ class Mnodis47 extends CI_Model {
        }else{
             $uri['id_sop']=$this->Mcrypt->decrypt($this->uri->segment(4));
             $this->db->update('tb_rentut',$data,$uri);
+       }
+    }
+    public function hasil($id,$proses){
+        $data=array(
+            'id_sop'=>$id,
+            'hasil' =>$this->input->post('hasil')
+
+        );
+        if($proses==0){
+         $this->db->insert('tb_hasil',$data);
+       }else{
+            $uri['id_sop']=$this->Mcrypt->decrypt($this->uri->segment(4));
+            $this->db->update('tb_hasil',$data,$uri);
+       }
+    }
+    public function laporan($id,$proses){
+        $data=array(
+            'id_sop'=>$id,
+            'laporan' =>$this->input->post('laporan')
+
+        );
+        if($proses==0){
+         $this->db->insert('tb_laporan',$data);
+       }else{
+            $uri['id_sop']=$this->Mcrypt->decrypt($this->uri->segment(4));
+            $this->db->update('tb_laporan',$data,$uri);
        }
     }
 

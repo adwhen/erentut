@@ -93,6 +93,20 @@
                     <textarea <?php echo $proses ?> class="form-control" id="tolak_ukur" name="tolak_ukur" type="text"><?php echo $data[0]['tolak_ukur']; ?></textarea>
                   </div>
                 </div>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Hasil Penelitian Kemasyarakatan</label>
+
+                  <div class="col-sm-10">
+                    <textarea <?php echo $proses ?> class="form-control" id="hasil" name="hasil" type="text"><?php echo $data[0]['hasil']; ?></textarea>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Laporan Sosial</label>
+
+                  <div class="col-sm-10">
+                    <textarea <?php echo $proses ?> class="form-control" id="laporan" name="laporan" type="text"><?php echo $data[0]['laporan']; ?></textarea>
+                  </div>
+                </div>
                 <div class="col-md-12" style="background-color: #00a65a;margin-bottom: 10px;"><center><label class="control-label">RENCANA TUNTUTAN PIDANA</label></center></div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Pidana Pokok</label>

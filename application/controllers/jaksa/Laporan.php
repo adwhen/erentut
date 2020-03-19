@@ -74,6 +74,8 @@ class Laporan extends CI_Controller {
 			$this->Mnodis47->keadaan($id_sop);
 			$this->Mnodis47->ukur($id_sop,$proses);
 			$this->Mnodis47->rentut($id_sop,$proses);
+			$this->Mnodis47->hasil($id_sop,$proses);
+			$this->Mnodis47->laporan($id_sop,$proses);
 			$this->Mupload->uploadFotoOrang($id_sop);
 			$this->Mupload->uploadFotoKoporasi($id_sop);
 			$this->session->set_flashdata('msg','Laporan Berhasil Ditambahkan.');

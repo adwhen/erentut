@@ -87,384 +87,390 @@
 	                        </tr>
 	                        <?php if($form[0]['id_orang'] != null){?>
 	                        <tr>
-	                          	<td width="2%" valign="top"></td>
-	                          	<td width="98%">(<b>Subjek orang perorangan (naturlijk person) </b></td>
-	                        </tr>
-	                        <tr>
-	                        	<td width="2%" valign="top"></td>
-	                        	<td width="98%">
-	                        	<table width="100%">
-					              <tr>
-					                <td width="5%" valign="top"></td>
-					                <td width="30%" valign="top">Nama Lengkap</td>       
-					                <td width="3%" valign="top">:</td> 
-					                <td align="justify"><?php echo $form[0]['nama_orang'] ?></td> 
-					              </tr>
-					              <tr>
-					                <td width="5%" valign="top"></td>
-					                <td width="30%" valign="top">Tempat Lahir</td>       
-					                <td width="3%" valign="top">:</td>
-					                <td align="justify"><?php echo $form[0]['tempat_lahirorang'] ?></td>  
-					              </tr>
-					              <tr>
-					                <td width="5%" valign="top"></td>
-					                <td width="30%" valign="top">Umur/Tanggal Lahir</td>       
-					                <td width="3%" valign="top">:</td> 
-					                <td align="justify"><?php echo umur($form[0]['tanggal_lahirorang']);?> tahun / <?php echo tgl_indo($form[0]['tanggal_lahirorang']) ?></td> 
-					              </tr>
-					              <tr>
-					                <td width="5%" valign="top"></td>
-					                <td width="30%" valign="top">Jenis Kelamin</td>       
-					                <td width="3%" valign="top">:</td>
-					                <td align="justify"><?php echo $form[0]['jk_orang'] ?></td>  
-					              </tr>
-					              <tr>
-					                <td width="5%" valign="top"></td>
-					                <td width="30%" valign="top">Kebangsaan</td>       
-					                <td width="3%" valign="top">:</td>
-					                <td align="justify"><?php echo $form[0]['kebangsaan_orang'] ?></td>  
-					              </tr>
-					              <tr>
-					                <td width="5%" valign="top"></td>
-					                <td width="30%" valign="top">Tempat Tinggal</td>       
-					                <td width="3%" valign="top">:</td>
-					                <td align="justify"><?php echo $form[0]['alamat_orang'] ?></td>  
-					              </tr>
-					              <tr>
-					                <td width="5%" valign="top"></td>
-					                <td width="30%" valign="top">Agama</td>       
-					                <td width="3%" valign="top">:</td>
-					                <td align="justify"><?php echo $form[0]['agama_orang'] ?></td>  
-					              </tr>
-					              <tr>
-					                <td width="5%" valign="top"></td>
-					                <td width="30%" valign="top">Pekerjaan</td>       
-					                <td width="3%" valign="top">:</td>
-					                <td align="justify"><?php echo $form[0]['pekerjaan_orang'] ?></td>  
-					              </tr>
-					              <tr>
-					                <td width="5%" valign="top"></td>
-					                <td width="30%" valign="top">Pendidikan</td>       
-					                <td width="3%" valign="top">:</td>
-					                <td align="justify"><?php echo $form[0]['pendidikan_orang'] ?></td>  
-					              </tr>
-					              <tr>
-					                <td width="5%" valign="top"></td>
-					                <td width="30%" valign="top">Identitas lain</td>       
-					                <td width="3%" valign="top">:</td>
-					                <td align="justify"></td>  
-					              </tr>
-					              <tr>
-					                <td width="5%" valign="top"></td>
-					                <td width="30%" valign="top">6. Foto Bewarna</td>       
-					                <td width="3%" valign="top">:</td>
-					                <td align="justify">............</td>  
-					              </tr>
-					              <tr>
-					                <td width="5%" valign="top"></td>
-					                <td width="30%" valign="top">7. Nomor KTP</td>       
-					                <td width="3%" valign="top">:</td>
-					                <td align="justify"><?php echo $form[0]['ktp_orang'] ?></td>  
-					              </tr>
-					              <tr>
-					                <td width="5%" valign="top"></td>
-					                <td width="30%" valign="top">8. Nomor SIM</td>       
-					                <td width="3%" valign="top">:</td>
-					                <td align="justify"><?php echo $form[0]['sim_orang'] ?></td>  
-					              </tr>
-					              <tr>
-					                <td width="5%" valign="top"></td>
-					                <td width="30%" valign="top">9. Nomor Passpor</td>       
-					                <td width="3%" valign="top">:</td>
-					                <td align="justify"><?php echo $form[0]['passpor_orang'] ?></td>  
-					              </tr>
-					              <tr>
-					                <td width="5%" valign="top"></td>
-					                <td width="30%" valign="top">10. Lain-lain</td>       
-					                <td width="3%" valign="top">:</td>
-					                <td align="justify">...............</td>  
-					              </tr>
+		                      	<td width="2%" valign="top"></td>
+		                      	<td width="98%">(1) <b>Subjek orang perorangan (naturlijk person) </b></td>
+		                    </tr>
+		                    <tr>
+		                    	<td width="2%" valign="top"></td>
+		                    	<td width="98%">
+		                    	<table width="100%">
+		                    		<tbody>
+		                    			 <tr>
+							                <td width="5%" valign="top"></td>
+							                <td width="30%" valign="top">Nama Lengkap</td>       
+							                <td width="3%" valign="top">:</td> 
+							                <td align="justify"><?php echo $form[0]['nama_orang'] ?></td> 
+							              </tr>
+							              <tr>
+							                <td width="5%" valign="top"></td>
+							                <td width="30%" valign="top">Tempat Lahir</td>       
+							                <td width="3%" valign="top">:</td>
+							                <td align="justify"><?php echo $form[0]['tempat_lahirorang'] ?></td>  
+							              </tr>
+							              <tr>
+							                <td width="5%" valign="top"></td>
+							                <td width="30%" valign="top">Umur/Tanggal Lahir</td>       
+							                <td width="3%" valign="top">:</td> 
+							                <td align="justify"><?php echo tgl_indo($form[0]['tanggal_lahirorang']) ?></td> 
+							              </tr>
+							              <tr>
+							                <td width="5%" valign="top"></td>
+							                <td width="30%" valign="top">Jenis Kelamin</td>       
+							                <td width="3%" valign="top">:</td>
+							                <td align="justify"><?php echo $form[0]['jk_orang'] ?></td>  
+							              </tr>
+							              <tr>
+							                <td width="5%" valign="top"></td>
+							                <td width="30%" valign="top">Kebangsaan</td>       
+							                <td width="3%" valign="top">:</td>
+							                <td align="justify"><?php echo $form[0]['kebangsaan_orang'] ?></td>  
+							              </tr>
+							              <tr>
+							                <td width="5%" valign="top"></td>
+							                <td width="30%" valign="top">Tempat Tinggal</td>       
+							                <td width="3%" valign="top">:</td>
+							                <td align="justify"><?php echo $form[0]['tempat_tinggalorang'] ?></td>  
+							              </tr>
+							              <tr>
+							                <td width="5%" valign="top"></td>
+							                <td width="30%" valign="top">Agama</td>       
+							                <td width="3%" valign="top">:</td>
+							                <td align="justify"><?php echo $form[0]['agama_orang'] ?></td>  
+							              </tr>
+							              <tr>
+							                <td width="5%" valign="top"></td>
+							                <td width="30%" valign="top">Pekerjaan</td>       
+							                <td width="3%" valign="top">:</td>
+							                <td align="justify"><?php echo $form[0]['pekerjaan_orang'] ?></td>  
+							              </tr>
+							              <tr>
+							                <td width="5%" valign="top"></td>
+							                <td width="30%" valign="top">Pendidikan</td>       
+							                <td width="3%" valign="top">:</td>
+							                <td align="justify"><?php echo $form[0]['pendidikan_orang'] ?></td>  
+							              </tr>
+							              <tr>
+							                <td width="5%" valign="top"></td>
+							                <td width="30%" valign="top">Identitas lain</td>       
+							                <td width="3%" valign="top">:</td>
+							                <td align="justify"></td>  
+							              </tr>
+							              <tr>
+							                <td width="5%" valign="top"></td>
+							                <td width="30%" valign="top">1. Foto Bewarna</td>       
+							                <td width="3%" valign="top">:</td>
+							                <td align="justify"></td>  
+							              </tr>
+							              <tr>
+							                <td width="5%" valign="top"></td>
+							                <td width="30%" valign="top">2. Nomor KTP</td>       
+							                <td width="3%" valign="top">:</td>
+							                <td align="justify"><?php echo $form[0]['ktp_orang'] ?></td>  
+							              </tr>
+							              <tr>
+							                <td width="5%" valign="top"></td>
+							                <td width="30%" valign="top">3. Nomor SIM</td>       
+							                <td width="3%" valign="top">:</td>
+							                <td align="justify"><?php echo $form[0]['sim_orang'] ?></td>  
+							              </tr>
+							              <tr>
+							                <td width="5%" valign="top"></td>
+							                <td width="30%" valign="top">4. Nomor Passpor</td>       
+							                <td width="3%" valign="top">:</td>
+							                <td align="justify"><?php echo $form[0]['passpor_orang'] ?></td>  
+							              </tr>
+							              <tr>
+							                <td width="5%" valign="top"></td>
+							                <td width="30%" valign="top">5. Lain-lain</td>       
+							                <td width="3%" valign="top">:</td>
+							                <td align="justify"><?php echo $form[0]['ket_orang'] ?></td>  
+							              </tr>
+		                    		</tbody>			             
 					            </table>
-	                          </td>
-	                        </tr>
-	                        <?php }else{ ?>
-	                        <tr>
-	                          <td width="2%" valign="top"></td>
-	                          <td width="98%"><b>Subjek Korporasi</b> </td>
-	                        </tr>
-	                        <tr>
-	                        	<td width="2%" valign="top"></td>
-	                        	<td width="98%">
+		                      </td>
+		                    </tr>
+		                	<?php }else{ ?>
+		                    <tr>
+		                      <td width="2%" valign="top"></td>
+		                      <td width="98%"><b>Subjek Korporasi</b> </td>
+		                    </tr>
+		                    <tr>
+		                    	<td width="2%" valign="top"></td>
+		                    	<td width="98%">
 		                        	<table width="100%">
-		                        		<tr>
-		                        			<td width="5%" valign="top"></td>
-		                        			<td width="95%"> (a) <b>Korporasi</b> </td>
-		                        		</tr>
-		                        		<tr>
-				                        	<td width="5%" valign="top"></td>
-				                        	<td width="95%">
-				                        	<table width="100%">
-								              <tr>
-								                <td width="3%" valign="top"></td>
-								                <td width="10%" valign="top">Nama Korporasi</td>       
-								                <td width="3%" valign="top">:</td> 
-								                <td align="justify">...........</td> 
-								              </tr>
-								              <tr>
-								                <td width="3%" valign="top"></td>
-								                <td width="10%" valign="top">Tempat, tanggal pendirian</td>       
-								                <td width="3%" valign="top">:</td>
-								                <td align="justify">.......</td>  
-								              </tr>
-								              <tr>
-								                <td width="3%" valign="top"></td>
-								                <td width="10%" valign="top">Nomor anggaran dasar/akta pendirian/peraturan/dokumen/perjanjian serta perubahan terakhir</td>       
-								                <td width="3%" valign="top">:</td> 
-								                <td align="justify">..........</td> 
-								              </tr>
-								              <tr>
-								                <td width="3%" valign="top"></td>
-								                <td width="10%" valign="top">Nomor Salinan Kep. Menkumham tentang Persetujuan Akta Pendirian Perseroan </td>       
-								                <td width="3%" valign="top">:</td>
-								                <td align="justify">..........</td>  
-								              </tr>
-								              <tr>
-								                <td width="3%" valign="top"></td>
-								                <td width="10%" valign="top">Nomor Salinan Kep. Menkunham tentang Persetujuan Akta Perubahan Perseroan</td>       
-								                <td width="3%" valign="top">:</td>
-								                <td align="justify">.............</td>  
-								              </tr>
-								              <tr>
-								                <td width="3%" valign="top"></td>
-								                <td width="10%" valign="top">Nomor dan tanggal akta korporasi pada saat tindak pidana terjadi</td>       
-								                <td width="3%" valign="top">:</td>
-								                <td align="justify">.............</td>  
-								              </tr>
-								              <tr>
-								                <td width="3%" valign="top"></td>
-								                <td width="10%" valign="top">Tempat kedudukan</td>       
-								                <td width="3%" valign="top">:</td>
-								                <td align="justify">............</td>  
-								              </tr>
-								              <tr>
-								                <td width="3%" valign="top"></td>
-								                <td width="10%" valign="top">Kebangsaan korporasi</td>       
-								                <td width="3%" valign="top">:</td>
-								                <td align="justify">............</td>  
-								              </tr>
-								              <tr>
-								                <td width="3%" valign="top"></td>
-								                <td width="10%" valign="top">Surat Keterangan terdaftar Mendagri untuk Ormas tidak berbadan hukum</td>       
-								                <td width="3%" valign="top">:</td>
-								                <td align="justify">................</td>  
-								              </tr>
-								              <tr>
-								                <td width="3%" valign="top"></td>
-								                <td width="10%" valign="top">Jenis Korporasi</td>       
-								                <td width="3%" valign="top">:</td>
-								                <td align="justify">................</td>  
-								              </tr>
-								              <tr>
-								                <td width="3%" valign="top"></td>
-								                <td width="10%" valign="top">Bentuk kegiatan/usaha</td>       
-								                <td width="3%" valign="top">:</td>
-								                <td align="justify">............</td>  
-								              </tr>
-								              <tr>
-								                <td width="3%" valign="top"></td>
-								                <td width="10%" valign="top">Alamat Korporasi</td>       
-								                <td width="3%" valign="top">:</td>
-								                <td align="justify">.............</td>  
-								              </tr>
-								              <tr>
-								                <td width="3%" valign="top"></td>
-								                <td width="10%" valign="top">Identitas Lain</td>       
-								                <td width="3%" valign="top"></td>
-								                <td align="justify"></td>  
-								              </tr>
-								              <tr>
-								                <td width="3%" valign="top"></td>
-								                <td width="10%" valign="top">4. NPWP</td>       
-								                <td width="3%" valign="top">:</td>
-								                <td align="justify">...............</td>  
-								              </tr>
-								              <tr>
-								                <td width="3%" valign="top"></td>
-								                <td width="10%" valign="top">5. Nomor Wajib Daftar Perusahaan</td>       
-								                <td width="3%" valign="top">:</td>
-								                <td align="justify">...............</td>  
-								              </tr>
-								              <tr>
-								                <td width="3%" valign="top"></td>
-								                <td width="10%" valign="top">6. Lain-lain</td>       
-								                <td width="3%" valign="top">:</td>
-								                <td align="justify">...............</td>  
-								              </tr>
-								              <tr>
-								                <td width="3%" valign="top"></td>
-								                <td width="10%" valign="top" colspan="3"><b>Identitas Orang Yang Mewakili Korporasi**)</b></td>         
-								              </tr>
-								              <tr>
-								                <td width="3%" valign="top"></td>
-								                <td width="10%" valign="top">Nama Lengkap</td>       
-								                <td width="3%" valign="top">:</td> 
-								                <td align="justify">...........</td> 
-								              </tr>
-								              <tr>
-								                <td width="3%" valign="top"></td>
-								                <td width="10%" valign="top">Tempat Lahir</td>       
-								                <td width="3%" valign="top">:</td>
-								                <td align="justify">.......</td>  
-								              </tr>
-								              <tr>
-								                <td width="3%" valign="top"></td>
-								                <td width="10%" valign="top">Umur/Tanggal Lahir</td>       
-								                <td width="3%" valign="top">:</td> 
-								                <td align="justify">..........</td> 
-								              </tr>
-								              <tr>
-								                <td width="3%" valign="top"></td>
-								                <td width="10%" valign="top">Jenis Kelamin</td>       
-								                <td width="3%" valign="top">:</td>
-								                <td align="justify">..........</td>  
-								              </tr>
-								              <tr>
-								                <td width="3%" valign="top"></td>
-								                <td width="10%" valign="top">Kebangsaan</td>       
-								                <td width="3%" valign="top">:</td>
-								                <td align="justify">.............</td>  
-								              </tr>
-								              <tr>
-								                <td width="3%" valign="top"></td>
-								                <td width="10%" valign="top">Tempat Tinggal</td>       
-								                <td width="3%" valign="top">:</td>
-								                <td align="justify">.............</td>  
-								              </tr>
-								              <tr>
-								                <td width="3%" valign="top"></td>
-								                <td width="10%" valign="top">Agama</td>       
-								                <td width="3%" valign="top">:</td>
-								                <td align="justify">............</td>  
-								              </tr>
-								              <tr>
-								                <td width="3%" valign="top"></td>
-								                <td width="10%" valign="top">Pekerjaan</td>       
-								                <td width="3%" valign="top">:</td>
-								                <td align="justify">............</td>  
-								              </tr>
-								              <tr>
-								                <td width="3%" valign="top"></td>
-								                <td width="10%" valign="top">Pendidikan</td>       
-								                <td width="3%" valign="top">:</td>
-								                <td align="justify">...............</td>  
-								              </tr>
-								            </table>
-								        	</td>
-								        </tr>
-								        <tr>
-		                        			<td width="5%" valign="top"></td>
-		                        			<td width="95%"> (b) <b>Orang Yang Mengendalikan Korporasi</b> </td>
-		                        		</tr>
-		                        		<tr>
-				                        	<td width="5%" valign="top"></td>
-				                        	<td width="95%">
-				                        	<table width="100%">
-								              <tr>
-								                <td width="5%" valign="top"></td>
-								                <td width="30%" valign="top">Nama Lengkap</td>       
-								                <td width="3%" valign="top">:</td> 
-								                <td align="justify">...........</td> 
-								              </tr>
-								              <tr>
-								                <td width="5%" valign="top"></td>
-								                <td width="30%" valign="top">Tempat Lahir</td>       
-								                <td width="3%" valign="top">:</td>
-								                <td align="justify">.......</td>  
-								              </tr>
-								              <tr>
-								                <td width="5%" valign="top"></td>
-								                <td width="30%" valign="top">Umur/Tanggal Lahir</td>       
-								                <td width="3%" valign="top">:</td> 
-								                <td align="justify">..........</td> 
-								              </tr>
-								              <tr>
-								                <td width="5%" valign="top"></td>
-								                <td width="30%" valign="top">Jenis Kelamin</td>       
-								                <td width="3%" valign="top">:</td>
-								                <td align="justify">..........</td>  
-								              </tr>
-								              <tr>
-								                <td width="5%" valign="top"></td>
-								                <td width="30%" valign="top">Kebangsaan</td>       
-								                <td width="3%" valign="top">:</td>
-								                <td align="justify">.............</td>  
-								              </tr>
-								              <tr>
-								                <td width="5%" valign="top"></td>
-								                <td width="30%" valign="top">Tempat Tinggal</td>       
-								                <td width="3%" valign="top">:</td>
-								                <td align="justify">.............</td>  
-								              </tr>
-								              <tr>
-								                <td width="5%" valign="top"></td>
-								                <td width="30%" valign="top">Agama</td>       
-								                <td width="3%" valign="top">:</td>
-								                <td align="justify">............</td>  
-								              </tr>
-								              <tr>
-								                <td width="5%" valign="top"></td>
-								                <td width="30%" valign="top">Pekerjaan</td>       
-								                <td width="3%" valign="top">:</td>
-								                <td align="justify">............</td>  
-								              </tr>
-								              <tr>
-								                <td width="5%" valign="top"></td>
-								                <td width="30%" valign="top">Pendidikan</td>       
-								                <td width="3%" valign="top">:</td>
-								                <td align="justify">...............</td>  
-								              </tr>
-								              <tr>
-								                <td width="5%" valign="top"></td>
-								                <td width="30%" valign="top">Identitas lain</td>       
-								                <td width="3%" valign="top"></td>
-								                <td align="justify"></td>  
-								              </tr>
-								              <tr>
-								                <td width="5%" valign="top"></td>
-								                <td width="30%" valign="top">5. Foto Bewarna</td>       
-								                <td width="3%" valign="top">:</td>
-								                <td align="justify">............</td>  
-								              </tr>
-								              <tr>
-								                <td width="5%" valign="top"></td>
-								                <td width="30%" valign="top">6. Nomor KTP</td>       
-								                <td width="3%" valign="top">:</td>
-								                <td align="justify">.............</td>  
-								              </tr>
-								              <tr>
-								                <td width="5%" valign="top"></td>
-								                <td width="30%" valign="top">7. Nomor SIM</td>       
-								                <td width="3%" valign="top">:</td>
-								                <td align="justify">...............</td>  
-								              </tr>
-								              <tr>
-								                <td width="5%" valign="top"></td>
-								                <td width="30%" valign="top">8. Nomor Passpor</td>       
-								                <td width="3%" valign="top">:</td>
-								                <td align="justify">...............</td>  
-								              </tr>
-								              <tr>
-								                <td width="5%" valign="top"></td>
-								                <td width="30%" valign="top">Lain-lain</td>       
-								                <td width="3%" valign="top">:</td>
-								                <td align="justify">...............</td>  
-								              </tr>
-								            </table>
-								        	</td>
-								        </tr>
+		                        		<tbody>
+		                        			<tr>
+		                        				<td width="5%" valign="top"></td>
+		                        				<td width="95%"> (a) <b>Korporasi</b> </td>
+		                        			</tr>
+		                        			<tr>
+					                        	<td width="5%" valign="top"></td>
+					                        	<td width="95%">
+					                        	<table width="100%">
+									              	<tr>
+										                <td width="3%" valign="top"></td>
+										                <td width="10%" valign="top">Nama Korporasi</td>       
+										                <td width="3%" valign="top">:</td> 
+										                <td align="justify"><?php echo $form[0]['nama_korporasi'] ?></td> 
+									              	</tr>
+									              	<tr>
+										                <td width="3%" valign="top"></td>
+										                <td width="10%" valign="top">Tempat, tanggal pendirian</td>       
+										                <td width="3%" valign="top">:</td>
+										                <td align="justify"><?php echo $form[0]['tempat_pendirian'] ?>, <?php echo tgl_indo( $form[0]['tanggal_pendirian']) ?></td>  
+									              	</tr>
+									              	<tr>
+										                <td width="3%" valign="top"></td>
+										                <td width="10%" valign="top">Nomor anggaran dasar/akta pendirian/peraturan/dokumen/perjanjian serta perubahan terakhir</td>       
+										                <td width="3%" valign="top">:</td> 
+										                <td align="justify" valign="top"><?php echo $form[0]['nomor_anggaran'] ?></td> 
+									              	</tr>
+									              	<tr>
+										                <td width="3%" valign="top"></td>
+										                <td width="10%" valign="top">Nomor Salinan Kep. Menkumham tentang Persetujuan Akta Pendirian Perseroan </td>       
+										                <td width="3%" valign="top">:</td>
+										                <td align="justify" valign="top"><?php echo $form[0]['nomor_pendirian'] ?></td>  
+									              	</tr>
+									              	<tr>
+										                <td width="3%" valign="top"></td>
+										                <td width="10%" valign="top">Nomor Salinan Kep. Menkunham tentang Persetujuan Akta Perubahan Perseroan</td>       
+										                <td width="3%" valign="top">:</td>
+										                <td align="justify" valign="top"><?php echo $form[0]['nomor_perubahan'] ?></td>  
+									              	</tr>
+									              	<tr>
+										                <td width="3%" valign="top"></td>
+										                <td width="10%" valign="top">Nomor dan tanggal akta korporasi pada saat tindak pidana terjadi</td>       
+										                <td width="3%" valign="top">:</td>
+										                <td align="justify" valign="top"><?php echo $form[0]['nomor_korporasi'] ?></td>  
+									              	</tr>
+									              	<tr>
+										                <td width="3%" valign="top"></td>
+										                <td width="10%" valign="top">Tempat kedudukan</td>       
+										                <td width="3%" valign="top">:</td>
+										                <td align="justify" valign="top"><?php echo $form[0]['tempat_korporasi'] ?></td>  
+									              	</tr>
+									              	<tr>
+										                <td width="3%" valign="top"></td>
+										                <td width="10%" valign="top">Kebangsaan korporasi</td>       
+										                <td width="3%" valign="top">:</td>
+										                <td align="justify" valign="top"><?php echo $form[0]['kebangsaan_korporasi'] ?></td>  
+									              	</tr>
+									              	<tr>
+										                <td width="3%" valign="top"></td>
+										                <td width="10%" valign="top">Surat Keterangan terdaftar Mendagri untuk Ormas tidak berbadan hukum</td>       
+										                <td width="3%" valign="top">:</td>
+										                <td align="justify" valign="top"><?php echo $form[0]['surat_korporasi'] ?></td>  
+									              	</tr>
+									              	<tr>
+										                <td width="3%" valign="top"></td>
+										                <td width="10%" valign="top">Jenis Korporasi</td>       
+										                <td width="3%" valign="top">:</td>
+										                <td align="justify" valign="top"><?php echo $form[0]['jenis_korporasi'] ?></td>  
+									              	</tr>
+									              	<tr>
+										                <td width="3%" valign="top"></td>
+										                <td width="10%" valign="top">Bentuk kegiatan/usaha</td>       
+										                <td width="3%" valign="top">:</td>
+										                <td align="justify" valign="top"><?php echo $form[0]['kegiatan_koporasi'] ?></td>  
+									              	</tr>
+									              	<tr>
+										                <td width="3%" valign="top"></td>
+										                <td width="10%" valign="top">Alamat Korporasi</td>       
+										                <td width="3%" valign="top">:</td>
+										                <td align="justify" valign="top"><?php echo $form[0]['alamat_korporasi'] ?></td>  
+									              	</tr>
+									              	<tr>
+										                <td width="3%" valign="top"></td>
+										                <td width="10%" valign="top">Identitas Lain</td>       
+										                <td width="3%" valign="top"></td>
+										                <td align="justify"></td>  
+									              	</tr>
+									              	<tr>
+										                <td width="3%" valign="top"></td>
+										                <td width="10%" valign="top">1. NPWP</td>       
+										                <td width="3%" valign="top">:</td>
+										                <td align="justify"><?php echo $form[0]['npwp'] ?></td>  
+									              	</tr>
+									              	<tr>
+										                <td width="3%" valign="top"></td>
+										                <td width="10%" valign="top">2. Nomor Wajib Daftar Perusahaan</td>       
+										                <td width="3%" valign="top">:</td>
+										                <td align="justify"><?php echo $form[0]['nwdp'] ?></td>  
+									              	</tr>
+									              	<tr>
+										                <td width="3%" valign="top"></td>
+										                <td width="10%" valign="top">3. Lain-lain</td>       
+										                <td width="3%" valign="top">:</td>
+										                <td align="justify"><?php echo $form[0]['kegiatan_korporasi'] ?></td>  
+									              	</tr>
+									              	<tr>
+										                <td width="3%" valign="top"></td>
+										                <td width="10%" valign="top" colspan="3"><b>Identitas Orang Yang Mewakili Korporasi**)</b></td>         
+									              	</tr>
+									              	<tr>
+										                <td width="3%" valign="top"></td>
+										                <td width="10%" valign="top">Nama Lengkap</td>       
+										                <td width="3%" valign="top">:</td> 
+										                <td align="justify"><?php echo $form[0]['nama_wakil'] ?></td> 
+									              	</tr>
+									              	<tr>
+										                <td width="3%" valign="top"></td>
+										                <td width="10%" valign="top">Tempat Lahir</td>       
+										                <td width="3%" valign="top">:</td>
+										                <td align="justify"><?php echo $form[0]['tempat_lahirwakil'] ?></td>  
+									              	</tr>
+									              	<tr>
+										                <td width="3%" valign="top"></td>
+										                <td width="10%" valign="top">Umur/Tanggal Lahir</td>       
+										                <td width="3%" valign="top">:</td> 
+										                <td align="justify"><?php echo umur($form[0]['tanggal_lahirwakil']); ?>/<?php echo $form[0]['tanggal_lahirwakil'] ?></td> 
+									              	</tr>
+									              	<tr>
+										                <td width="3%" valign="top"></td>
+										                <td width="10%" valign="top">Jenis Kelamin</td>       
+										                <td width="3%" valign="top">:</td>
+										                <td align="justify"><?php echo $form[0]['jk_wakil'] ?></td>  
+									              	</tr>
+									              	<tr>
+										                <td width="3%" valign="top"></td>
+										                <td width="10%" valign="top">Kebangsaan</td>       
+										                <td width="3%" valign="top">:</td>
+										                <td align="justify"><?php echo $form[0]['kebangsaan_wakil'] ?></td>  
+									              	</tr>
+									              	<tr>
+										                <td width="3%" valign="top"></td>
+										                <td width="10%" valign="top">Tempat Tinggal</td>       
+										                <td width="3%" valign="top">:</td>
+										                <td align="justify"><?php echo $form[0]['alamat_wakil'] ?></td>  
+									              	</tr>
+									              	<tr>
+										                <td width="3%" valign="top"></td>
+										                <td width="10%" valign="top">Agama</td>       
+										                <td width="3%" valign="top">:</td>
+										                <td align="justify"><?php echo $form[0]['agama_wakil'] ?></td>  
+									              	</tr>
+									              	<tr>
+										                <td width="3%" valign="top"></td>
+										                <td width="10%" valign="top">Pekerjaan</td>       
+										                <td width="3%" valign="top">:</td>
+										                <td align="justify"><?php echo $form[0]['pekerjaan_wakil'] ?></td>  
+									              	</tr>
+									              	<tr>
+										                <td width="3%" valign="top"></td>
+										                <td width="10%" valign="top">Pendidikan</td>       
+										                <td width="3%" valign="top">:</td>
+										                <td align="justify"><?php echo $form[0]['pendidikan_wakil'] ?></td>  
+									              	</tr>
+								            	</table>
+								        		</td>
+								        	</tr>
+									        <tr>
+			                        			<td width="5%" valign="top"></td>
+			                        			<td width="95%"> (b) <b>Orang Yang Mengendalikan Korporasi</b> </td>
+			                        		</tr>
+			                        		<tr>
+					                        	<td width="5%" valign="top"></td>
+					                        	<td width="95%">
+					                        	<table width="100%">
+									              	<tbody>
+									              		<tr>
+										                	<td width="3%" valign="top"></td>
+										                	<td width="30%" valign="top">Nama Lengkap</td>       
+										                	<td width="3%" valign="top">:</td> 
+										                	<td align="justify"><?php echo $form[0]['nama_kendali'] ?></td> 
+										              	</tr>
+											            <tr>
+											                <td width="3%" valign="top"></td>
+											                <td width="30%" valign="top">Tempat Lahir</td>       
+											                <td width="3%" valign="top">:</td>
+											                <td align="justify"><?php echo $form[0]['tempat_lahirkendali'] ?></td>  
+											            </tr>
+										              	<tr>
+											                <td width="3%" valign="top"></td>
+											                <td width="30%" valign="top">Umur/Tanggal Lahir</td>       
+											                <td width="3%" valign="top">:</td> 
+											                <td align="justify"><?php echo umur($form[0]['tanggal_lahirwakil']); ?>/<?php echo tgl_indo($form[0]['tanggal_lahirwakil']); ?></td> 
+										              	</tr>
+										              	<tr>
+											                <td width="3%" valign="top"></td>
+											                <td width="30%" valign="top">Jenis Kelamin</td>       
+											                <td width="3%" valign="top">:</td>
+											                <td align="justify"><?php echo $form[0]['jk_kendali'] ?></td>  
+										              	</tr>
+										              	<tr>
+											                <td width="3%" valign="top"></td>
+											                <td width="30%" valign="top">Kebangsaan</td>       
+											                <td width="3%" valign="top">:</td>
+											                <td align="justify"><?php echo $form[0]['kebangsaan_kendali'] ?></td>  
+										              	</tr>
+										              	<tr>
+											                <td width="3%" valign="top"></td>
+											                <td width="30%" valign="top">Tempat Tinggal</td>       
+											                <td width="3%" valign="top">:</td>
+											                <td align="justify"><?php echo $form[0]['alamat_kendali'] ?></td>  
+										              	</tr>
+										              	<tr>
+											                <td width="3%" valign="top"></td>
+											                <td width="30%" valign="top">Agama</td>       
+											                <td width="3%" valign="top">:</td>
+											                <td align="justify"><?php echo $form[0]['agama_kendali'] ?></td>  
+										              	</tr>
+										              	<tr>
+											                <td width="3%" valign="top"></td>
+											                <td width="30%" valign="top">Pekerjaan</td>       
+											                <td width="3%" valign="top">:</td>
+											                <td align="justify"><?php echo $form[0]['pekerjaan_kendali'] ?></td>  
+										              	</tr>
+										              	<tr>
+											                <td width="3%" valign="top"></td>
+											                <td width="30%" valign="top">Pendidikan</td>       
+											                <td width="3%" valign="top">:</td>
+											                <td align="justify">.<?php echo $form[0]['pendidikan_kendali'] ?></td>  
+										              	</tr>
+										              	<tr>
+											                <td width="3%" valign="top"></td>
+											                <td width="30%" valign="top">Identitas lain</td>       
+											                <td width="3%" valign="top"></td>
+											                <td align="justify"></td>  
+										              	</tr>
+										              	<tr>
+											                <td width="3%" valign="top"></td>
+											                <td width="30%" valign="top">5. Foto Bewarna</td>       
+											                <td width="3%" valign="top">:</td>
+											                <td align="justify">............</td>  
+										              	</tr>
+										              	<tr>
+											                <td width="3%" valign="top"></td>
+											                <td width="30%" valign="top">6. Nomor KTP</td>       
+											                <td width="3%" valign="top">:</td>
+											                <td align="justify"><?php echo $form[0]['ktp_kendali'] ?></td>  
+										              	</tr>
+										              	<tr>
+											                <td width="3%" valign="top"></td>
+											                <td width="30%" valign="top">7. Nomor SIM</td>       
+											                <td width="3%" valign="top">:</td>
+											                <td align="justify"><?php echo $form[0]['sim_kendali'] ?></td>  
+										              	</tr>
+										              	<tr>
+											                <td width="3%" valign="top"></td>
+											                <td width="30%" valign="top">8. Nomor Passpor</td>       
+											                <td width="3%" valign="top">:</td>
+											                <td align="justify"><?php echo $form[0]['passpor_kendali'] ?></td>  
+										              	</tr>
+										              	<tr>
+											                <td width="3%" valign="top"></td>
+											                <td width="30%" valign="top">Lain-lain</td>       
+											                <td width="3%" valign="top">:</td>
+											                <td align="justify"><?php echo $form[0]['ket_kendali'] ?></td>  
+										              	</tr>
+									              	</tbody>
+									            </table>
+									        	</td>
+									        </tr>
+		                        		</tbody>
 							       	</table>
-	                          	</td>
-	                        </tr>
+		                      	</td>
+		                    </tr>
 	                    	<?php } ?>
 	                        <tr>
 	                          <td valign="top" colspan="3">telah sampai pada tahap tuntutan pidana yang akan dibacakan oleh Penuntut Umum pada hari <?php echo hari_indo($form[0]['tanggal'])?> tanggal <?php echo tgl_indo($form[0]['tanggal'])?></td>
@@ -591,7 +597,7 @@
 	                        </tr>
 	                        <tr>
 	                          <td width="2%" valign="top"></td>
-	                          <td colspan="2">......</td>
+	                          <td colspan="2"><?php echo $form[0]['hasil'] ?></td>
 	                        </tr>
 	                        <tr>
 	                          <td width="2%" valign="top">10.</td>
@@ -599,7 +605,7 @@
 	                        </tr>
 	                        <tr>
 	                          <td width="2%" valign="top"></td>
-	                          <td colspan="2">......</td>
+	                          <td colspan="2"><?php echo $form[0]['laporan'] ?></td>
 	                        </tr>
 	                        <tr>
 	                          <td width="2%" valign="top">11.</td>
