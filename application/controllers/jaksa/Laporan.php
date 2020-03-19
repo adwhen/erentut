@@ -30,6 +30,7 @@ class Laporan extends CI_Controller {
 		$this->form_validation->set_rules('dari', 'dari', 'required');
 		$this->form_validation->set_rules('nomor_sop', 'nomor_sop','required');
 		$this->form_validation->set_rules('perihal', 'perihal', 'required');
+		$this->form_validation->set_rules('lampiran', 'lampiran', 'required');
 		$this->form_validation->set_rules('sifat', 'sifat', 'required');
 		$this->form_validation->set_rules('terdakwa', 'terdakwa', 'required');
 		$this->form_validation->set_rules('tanggal', 'tanggal', 'required');

@@ -52,9 +52,11 @@
                       <a href="<?php echo base_url('kajari/rentut/lihatForm/47');?>">
                       <button  class="btn btn-primary" title="Hapus"><i class="fa fa-file"></i>&nbsp;&nbsp;FORM 47</button>
                       </a>
-                      <a href="<?php echo base_url('kajari/rentut/lihatForm/48');?>">
+                      <?php if($dt['posisi'] >= 2){ ?>
+                      <a href="<?php echo base_url('kajari/rentut/lihatForm/48/'.$dt['posisi'].'/'.$this->Mcrypt->encrypt($dt['id_sop']));?>" target="_blank">
                       <button  class="btn btn-primary" title="Hapus"><i class="fa fa-file"></i>&nbsp;&nbsp;FORM 48</button>
                       </a>
+                      <?php }; ?>
                       <?php if($dt['posisi'] == 6){?>
                       <a href="<?php echo base_url('kajari/rentut/lihatForm/surat');?>">
                       <button  class="btn btn-primary" title="Hapus"><i class="fa fa-file"></i>&nbsp;&nbsp;SURAT</button>
