@@ -128,6 +128,7 @@ class Rentut extends CI_Controller {
                   	join('tb_rentut','tb_rentut.id_sop=tb_sopform.id_sop','LEFT')->
 					where('tb_sopform.id_sop', $id)->
 					get('tb_sopform')->result_array(),
+			'form47'=>$this->Mnodis47->tampil($id),
 		);
 		if($jenis == '47'){
 			$this->load->view('form/form47',$data);
