@@ -62,7 +62,7 @@
                 <tr>  
                   <td width="10%" valign="top">Perihal</span></td>       
                   <td width="2%" valign="top">:</td>           
-                  <td width="38%" valign="top" align="justify"<?php echo $data[0]['perihal']?></td> 
+                  <td width="38%" valign="top" align="justify"><?php echo $data[0]['perihal']?></td> 
                   <td width="10%" align="justify"></td>
                   <td width="40%" align="justify">KEPADA YTH : <br> KEPALA <?php echo strtoupper($data[0]['tujuan'])?> <br> DI <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <u><?php echo strtoupper(lokasi($data[0]['tujuan']))?></u></td>                   
                 </tr>
@@ -73,7 +73,7 @@
               <tbody>
                 <tr>  
                   <td width="12%" align="justify"></td>                 
-                  <td width="88%" align="justify"> &nbsp;&nbsp;&nbsp;Sehubungan dengan telah selesainya pemeriksaan di persidangan perkara tindak pidana ......... dengan nama Terdakwa/Anak*) ......., bersama ini dengan hormat kami laporkan sebagai berikut : 
+                  <td width="88%" align="justify"> &nbsp;&nbsp;&nbsp;Sehubungan dengan telah selesainya pemeriksaan di persidangan perkara tindak pidana <?php echo $data[0]['kategori'] ?> dengan nama Terdakwa/Anak*) <?php if($data[0]['terdakwa']=="Perorangan"){echo $form[0]['nama_orang'];}else{echo $form[0]['nama_korporasi'];} ?> bersama ini dengan hormat kami laporkan sebagai berikut : 
                   </td>           
                 </tr>
                 <tr>  
@@ -85,7 +85,7 @@
 	                          	<td width="2%" valign="top">1.</td>
 	                          	<td colspan="2">Identitas Terdakwa/Anak*)**) : </td>
 	                        </tr>
-	                        <?php if($form[0]['id_orang'] != null){?>
+	                        <?php if($form[0]['terdakwa'] == "Perorangan"){?>
 	                        <tr>
 		                      	<td width="2%" valign="top"></td>
 		                      	<td width="98%">(1) <b>Subjek orang perorangan (naturlijk person) </b></td>

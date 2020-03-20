@@ -50,8 +50,17 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Lampiran</label>
 
-                  <div class="col-sm-10">
+                  <div class="col-sm-4">
                     <input required  class="form-control" id="lampiran" name="lampiran" type="text" value="<?php echo $data[0]['lampiran'] ?>"  >
+                  </div>
+                  <label class="col-sm-2 control-label">Kategori Tindak Pidana</label>
+
+                  <div class="col-sm-4">
+                    <select required  class="form-control" id="kategori" name="kategori" type="text"  >
+                      <option value="">Pilih</option>
+                      <option <?php if($data[0]['kategori']=="Umum"){echo "selected";} ?>>Umum</option>
+                      <option <?php if($data[0]['kategori']=="Anak"){echo "selected";} ?>>Anak</option>
+                    </select>
                   </div>
                 </div>
                 <div class="form-group">

@@ -132,5 +132,36 @@ class Laporan extends CI_Controller {
 			);
 			$this->load->view('jaksa/snippet/template',$data);
 	}
+	public function rentut($jenis,$id){
+		$id=$this->Mcrypt->decrypt($id);
+		$data=array(
+			
+			'form' => $this->db->order_by('tb_rentut.id_sop','DESC')->
+					join('tb_korporasi','tb_korporasi.id_sop=tb_sopform.id_sop','LEFT')->
+					join('tb_kendalikorporasi','tb_kendalikorporasi.id_sop=tb_sopform.id_sop','LEFT')->
+					join('tb_wakilkorporasi','tb_wakilkorporasi.id_sop=tb_sopform.id_sop','LEFT')->
+					join('tb_orang','tb_orang.id_sop=tb_sopform.id_sop','LEFT')->
+					join('tb_kasus','tb_kasus.id_sop=tb_sopform.id_sop','LEFT')->
+					join('tb_pasaldakwa','tb_pasaldakwa.id_sop=tb_sopform.id_sop','LEFT')->
+					join('tb_pasalbukti','tb_pasalbukti.id_sop=tb_sopform.id_sop','LEFT')->
+					join('tb_barangbukti','tb_barangbukti.id_sop=tb_sopform.id_sop','LEFT')->
+					join('tb_akibat','tb_akibat.id_sop=tb_sopform.id_sop','LEFT')->
+					join('tb_keadaan','tb_keadaan.id_sop=tb_sopform.id_sop','LEFT')->
+                  	join('tb_ukur','tb_ukur.id_sop=tb_sopform.id_sop','LEFT')->
+                  	join('tb_rentut','tb_rentut.id_sop=tb_sopform.id_sop','LEFT')->
+                  	join('tb_hasil','tb_hasil.id_sop=tb_sopform.id_sop','LEFT')->
+                  	join('tb_laporan','tb_laporan.id_sop=tb_sopform.id_sop','LEFT')->
+					where('tb_sopform.id_sop', $id)->
+					get('tb_sopform')->result_array(),
+			'form47'=>$this->Mnodis47->tampil($id),
+		);
+		if($jenis == '47'){
+			$this->load->view('form/form47',$data);
+		}elseif ($jenis == '48') {
+			$this->load->view('form/form48',$data);
+		}elseif ($jenis == 'surat') {
+			$this->load->view('form/surat',$data);
+		}
+	}
 	
 }

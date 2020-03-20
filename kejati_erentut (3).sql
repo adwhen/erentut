@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 18, 2020 at 07:01 AM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.2.27
+-- Generation Time: Mar 20, 2020 at 02:00 AM
+-- Server version: 10.3.16-MariaDB
+-- PHP Version: 7.3.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -122,7 +122,60 @@ INSERT INTO `log_aktv` (`id`, `username`, `ip`, `aktivitas`, `datetime`) VALUES
 (79, '123', '::1', 'Login ke sistem', '2020-03-18 06:41:21'),
 (80, '321', '::1', 'Login ke sistem', '2020-03-18 06:43:51'),
 (81, '123', '::1', 'Login ke sistem', '2020-03-18 06:44:06'),
-(82, '4321', '::1', 'Login ke sistem', '2020-03-18 06:57:53');
+(82, '4321', '::1', 'Login ke sistem', '2020-03-18 06:57:53'),
+(83, '54321', '::1', 'Login ke sistem', '2020-03-18 08:33:55'),
+(84, '54321', '::1', 'Login ke sistem', '2020-03-18 08:34:36'),
+(85, '123', '::1', 'Login ke sistem', '2020-03-18 08:47:41'),
+(86, '123', '::1', 'Kasi 123 mengubah usulan', '2020-03-18 09:00:56'),
+(87, '123', '::1', 'Kasi 123 mengubah usulan', '2020-03-18 09:01:04'),
+(88, '123', '::1', 'Kasi 123 mengubah usulan', '2020-03-18 09:01:25'),
+(89, '123', '::1', 'Kasi 123 mengubah usulan', '2020-03-18 09:01:31'),
+(90, '321', '::1', 'Login ke sistem', '2020-03-18 09:01:59'),
+(91, '321', '::1', 'Kajari 321 mengubah usulan', '2020-03-18 09:05:10'),
+(92, '321', '::1', 'Kajari 321 mengubah usulan', '2020-03-18 09:05:19'),
+(93, '4321', '::1', 'Login ke sistem', '2020-03-18 09:05:46'),
+(94, '4321', '::1', 'Aspidum 4321 mengubah usulan', '2020-03-18 09:08:52'),
+(95, '54321', '::1', 'Login ke sistem', '2020-03-18 09:09:50'),
+(96, '54321', '::1', 'Kajati 54321 mengubah usulan', '2020-03-18 09:14:11'),
+(97, '54321', '::1', 'Kajati 54321 mengubah usulan', '2020-03-18 09:14:21'),
+(98, '54321', '::1', 'Login ke sistem', '2020-03-18 11:55:17'),
+(99, '54321', '::1', 'Login ke sistem', '2020-03-18 11:55:51'),
+(100, 'admin', '::1', 'Login ke sistem', '2020-03-19 12:29:13'),
+(101, '12345', '::1', 'Login ke sistem', '2020-03-19 12:29:56'),
+(102, '54321', '::1', 'Login ke sistem', '2020-03-19 12:32:41'),
+(103, '4321', '::1', 'Login ke sistem', '2020-03-19 01:54:18'),
+(104, 'admin', '::1', 'Login ke sistem', '2020-03-19 02:58:45'),
+(105, '123', '::1', 'Login ke sistem', '2020-03-19 02:59:09'),
+(106, '131197', '::1', 'Login ke sistem', '2020-03-19 03:14:54'),
+(107, '131197', '::1', 'Login ke sistem', '2020-03-19 05:53:18'),
+(108, '131197', '::1', 'menambakan sopform 47', '2020-03-19 06:11:05'),
+(109, '131197', '::1', 'menambakan sopform 47', '2020-03-19 06:11:55'),
+(110, '131197', '::1', 'menambakan sopform 47', '2020-03-19 06:12:26'),
+(111, '131197', '::1', 'mengubah sopform 47', '2020-03-19 06:20:28'),
+(112, '131197', '::1', 'mengubah sopform 47', '2020-03-19 06:21:06'),
+(113, '131197', '::1', 'mengubah sopform 47', '2020-03-19 06:21:32'),
+(114, '131197', '::1', 'mengubah sopform 47', '2020-03-19 06:22:28'),
+(115, '131197', '::1', 'mengubah sopform 47', '2020-03-19 06:29:19'),
+(116, '131197', '::1', 'mengubah sopform 47', '2020-03-19 06:29:52'),
+(117, '131197', '::1', 'mengubah sopform 47', '2020-03-19 06:30:40'),
+(118, '131197', '::1', 'mengubah sopform 47', '2020-03-19 06:31:26'),
+(119, '131197', '::1', 'mengubah sopform 47', '2020-03-19 06:31:40'),
+(120, '131197', '::1', 'mengubah sopform 47', '2020-03-19 06:33:49'),
+(121, '131197', '::1', 'mengubah sopform 47', '2020-03-19 06:34:49'),
+(122, '131197', '::1', 'mengubah sopform 47', '2020-03-19 06:34:58'),
+(123, '54321', '::1', 'Login ke sistem', '2020-03-19 06:02:11'),
+(124, '131197', '::1', 'Login ke sistem', '2020-03-19 07:01:06'),
+(125, '131197', '::1', 'mengubah sopform 47', '2020-03-19 07:07:09'),
+(126, '131197', '::1', 'mengubah sopform 47', '2020-03-19 07:07:59'),
+(127, '54321', '::1', 'Login ke sistem', '2020-03-19 07:11:13'),
+(128, '131197', '::1', 'Login ke sistem', '2020-03-19 07:30:33'),
+(129, '131197', '::1', 'menambakan sopform 47', '2020-03-19 07:44:13'),
+(130, '131197', '::1', 'mengubah sopform 47', '2020-03-19 07:53:16'),
+(131, '131197', '::1', 'mengubah sopform 47', '2020-03-19 07:54:04'),
+(132, '131197', '::1', 'Login ke sistem', '2020-03-20 01:12:54'),
+(133, '54321', '::1', 'Login ke sistem', '2020-03-20 01:13:21'),
+(134, '54321', '::1', 'Kajati 54321 mengubah usulan', '2020-03-20 01:34:43'),
+(135, '131197', '::1', 'mengubah sopform 47', '2020-03-20 01:43:59');
 
 -- --------------------------------------------------------
 
@@ -154,7 +207,9 @@ INSERT INTO `tb_akibat` (`id_akibat`, `id_sop`, `rugi`, `mati`, `luka`, `akibat_
 (16, 21, 123, '123', '123', '123'),
 (17, 21, 123, '123', '123', '123'),
 (18, 22, 1, '2', '3', '4'),
-(19, 22, 1, '2', '3', '4');
+(19, 22, 1, '2', '3', '4'),
+(20, 23, 111, 'asd', 'asdasd', 'asdas'),
+(21, 24, 0, '', '', '');
 
 -- --------------------------------------------------------
 
@@ -182,8 +237,9 @@ INSERT INTO `tb_barangbukti` (`id_barangbukti`, `id_sop`, `barang_bukti`) VALUES
 (15, 20, NULL),
 (16, 21, NULL),
 (17, 21, NULL),
-(18, 22, NULL),
-(19, 22, NULL);
+(19, 22, 'barang bukti'),
+(20, 23, 'asdasdasdas'),
+(21, 24, '');
 
 -- --------------------------------------------------------
 
@@ -196,6 +252,14 @@ CREATE TABLE `tb_hasil` (
   `id_sop` int(11) NOT NULL,
   `hasil` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tb_hasil`
+--
+
+INSERT INTO `tb_hasil` (`id_hasil`, `id_sop`, `hasil`) VALUES
+(1, 23, 'www'),
+(2, 24, '');
 
 -- --------------------------------------------------------
 
@@ -224,8 +288,11 @@ INSERT INTO `tb_kasus` (`id_kasus`, `id_sop`, `kasus`) VALUES
 (16, 20, 'a'),
 (17, 21, 'kasus'),
 (18, 21, 'kasus'),
-(19, 22, 'a'),
-(20, 22, 'a');
+(20, 22, 'a'),
+(21, 23, 'sdas'),
+(22, 23, 'sdas'),
+(23, 24, ''),
+(24, 24, '');
 
 -- --------------------------------------------------------
 
@@ -250,7 +317,13 @@ INSERT INTO `tb_keadaan` (`id_keadaan`, `id_sop`, `berat`, `ringan`) VALUES
 (3, 15, '1', '1'),
 (8, 20, 'asda', 'dad'),
 (9, 21, 'berat', 'ringan'),
-(10, 22, 'f', 'faf');
+(10, 22, 'f', 'faf'),
+(11, 22, 'de', 'dffgg'),
+(82, 23, '1', '5'),
+(83, 23, '2', '6'),
+(84, 23, '3', '7'),
+(85, 23, '4', '8'),
+(86, 23, NULL, '9');
 
 -- --------------------------------------------------------
 
@@ -288,7 +361,9 @@ INSERT INTO `tb_kendalikorporasi` (`id_kendali`, `id_sop`, `id_korporasi`, `nama
 (3, 15, 3, '22', '23', '2020-03-13', 'laki-laki', '', '24', 'Islam', '25', '26', NULL, '27', '29', '28', '30'),
 (8, 20, 8, '', '', '0000-00-00', '', '', '', '', '', '', NULL, '', '', '', ''),
 (9, 21, 9, '', '', '0000-00-00', '', '', '', '', '', '', NULL, '', '', '', ''),
-(10, 22, 10, '', '', '0000-00-00', '', '', '', '', '', '', NULL, '', '', '', '');
+(10, 22, 10, 'kndli', '', '0000-00-00', '', '', '', '', '', '', NULL, '', '', '', ''),
+(11, 23, 11, '', '', '0000-00-00', '', '', '', '', '', '', NULL, '', '', '', ''),
+(12, 24, 12, 'dsadasd', 'sadasdasd', '2018-03-07', 'laki-laki', 'WNI', 'adsad', 'Islam', 'asdasd', 'asdasd', NULL, 'asdasda', 'dasdas', 'dasdas', 'dasdas');
 
 -- --------------------------------------------------------
 
@@ -327,7 +402,9 @@ INSERT INTO `tb_korporasi` (`id_korporasi`, `id_sop`, `nama_korporasi`, `tempat_
 (3, 15, '1', '12', '2020-03-12', '3', '9', '5', '6', '7', '', '9', '10', '11', '12', 13, 14, '15'),
 (8, 20, '', '', '0000-00-00', '', '', '', '', '', '', '', '', '', '', 0, 0, ''),
 (9, 21, '', '', '0000-00-00', '', '', '', '', '', '', '', '', '', '', 0, 0, ''),
-(10, 22, '', '', '0000-00-00', '', '', '', '', '', '', '', '', '', '', 0, 0, '');
+(10, 22, 'agg', 'a', '0000-00-00', '5', '7', '8', '3', 'bkl', 'wni', 'srt', 'jns', 'kgtn', 'almt', 1, 1, ''),
+(11, 23, '', '', '0000-00-00', '', '', '', '', '', '', '', '', '', '', 0, 0, ''),
+(12, 24, 'zcxz', 'czczxcxzc', '2020-03-12', 'cxzczx', 'czxczxc', 'czxczxc', 'xczxczx', 'zxczxc', 'WNI', 'czxczxc', 'zxczxczxc', 'zxczxcz', 'xczxcxc', 0, 0, 'zczxczx');
 
 -- --------------------------------------------------------
 
@@ -340,6 +417,14 @@ CREATE TABLE `tb_laporan` (
   `id_sop` int(11) NOT NULL,
   `laporan` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tb_laporan`
+--
+
+INSERT INTO `tb_laporan` (`id_laporan`, `id_sop`, `laporan`) VALUES
+(1, 23, 'wwwww'),
+(2, 24, '');
 
 -- --------------------------------------------------------
 
@@ -376,7 +461,9 @@ INSERT INTO `tb_orang` (`id_orang`, `id_sop`, `nama_orang`, `tempat_lahirorang`,
 (3, 15, '', '', '0000-00-00', '', '', '', '', '', '', NULL, '', '', '', ''),
 (8, 20, 'Nama Lengkap', 'Tempat Lahir', '2020-04-02', 'laki-laki', 'WNI', 'Alamat', 'Islam', 'Pekerjaan', 'Pendidikan', NULL, '122', '1233', '1233', '1223'),
 (9, 21, 'nama ', 'tempat', '2020-03-21', 'laki-laki', 'WNI', 'alamat', 'Islam', 'pekerjaan', 'pendidikan', NULL, '123', '123', '123', '123'),
-(10, 22, 'a', 'f', '2020-03-27', 'laki-laki', 'WNI', 'a', 'Islam', 'a', 'a', NULL, 'a', 'a', 'a', 'a');
+(10, 22, 'ajik', 'f', '2017-04-05', 'laki-laki', 'WNI', 'a', 'Islam', 'a', 'a', NULL, 'a', 'a', 'a', 'a'),
+(11, 23, 'Aasds', 'bengkulu', '2020-03-18', '', 'WNI', 'WR supratman', 'Islam', 'BUruh', 'S1', NULL, '1231231', '12312343', '5345435', '1'),
+(12, 24, 'astaga', '', '0000-00-00', '', '', '', '', '', '', NULL, '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -400,7 +487,9 @@ INSERT INTO `tb_pasalbukti` (`id_pasalbukti`, `id_sop`, `pasal_bukti`) VALUES
 (3, 15, '1'),
 (8, 20, 'a'),
 (9, 21, 'pasal'),
-(10, 22, 'a');
+(10, 22, 'a'),
+(11, 23, 'dasd'),
+(12, 24, '');
 
 -- --------------------------------------------------------
 
@@ -424,7 +513,9 @@ INSERT INTO `tb_pasaldakwa` (`id_pasaldakwa`, `id_sop`, `pasal_dakwa`) VALUES
 (3, 15, '1'),
 (8, 20, 'a'),
 (9, 21, 'pasal'),
-(10, 22, 'a');
+(10, 22, 'ab'),
+(11, 23, 'asda'),
+(12, 24, '');
 
 -- --------------------------------------------------------
 
@@ -449,7 +540,7 @@ CREATE TABLE `tb_pegawai` (
 --
 
 INSERT INTO `tb_pegawai` (`id_pegawai`, `nip`, `nama_pegawai`, `jabatan_pegawai`, `pangkat_pegawai`, `golongan_pegawai`, `keterangan_pegawai`, `password`, `level`) VALUES
-(1, '1111111111111111', 'Aji Dwi Herza Novariadi', 'Jaksa', 'Struktrual', '3a', 'Kejaksaan Tinggi Bengkulu', 'e9335e177b288c7af4af8f1225c3f938', 1),
+(1, '131197', 'Aji Dwi Herza Novariadi', 'Jaksa', 'Struktrual', '3a', 'KEJAKSAAN NEGERI BENGKULU UTARA', 'e10adc3949ba59abbe56e057f20f883e', 1),
 (3, '222222', 'agief', 'jaksa', 'asd', 'asd', 'kejaksaan negeri bengkulu', 'e10adc3949ba59abbe56e057f20f883e', 1),
 (4, '2222222', 'Rina', 'aspidum', 'asdasdas', 'asdsadas', 'kejaksaan tinggi bengkulu', 'e10adc3949ba59abbe56e057f20f883e', 1),
 (6, 'admin', '', '', '', '', '', '21232f297a57a5a743894a0e4a801fc3', 0),
@@ -496,9 +587,11 @@ INSERT INTO `tb_rentut` (`id_rentut`, `id_sop`, `pidana_pokok`, `pidana_tambahan
 (10, 21, 'z', 'y', 'c', 'd', 'e', NULL, 'f', 2),
 (13, 22, 'Ini usulan kajari', 'Ini usulan kajari', 'Ini usulan kajari', 'Ini usulan kajari', 'Ini usulan kajari', 'fwe', 'Ini usulan kajari', 1),
 (14, 22, 'Ini usulan kasi', 'Ini usulan kasi', 'Ini usulan kasi', 'Ini usulan kasi', 'Ini usulan kasi', NULL, 'Ini usulan kasi', 2),
-(20, 22, 'Ini usulan kajari', 'Ini usulan kajari', 'Ini usulan kajari', 'Ini usulan kajari', 'Ini usulan kajari', NULL, 'Ini usulan kajari', 3),
-(22, 22, 'Ini usulan aspiduma', 'Ini usulan aspiduma', 'Ini usulan aspiduma', 'Ini usulan aspiduma', 'Ini usulan aspiduma', NULL, 'Ini usulan aspiduma', 4),
-(23, 22, 'Ini usulan kajati', 'Ini usulan kajati', 'Ini usulan kajati', 'Ini usulan kajati', 'Ini usulan kajati', NULL, 'Ini usulan kajati', 5);
+(20, 22, 'Ini usulan kajaria', 'Ini usulan kajaria', 'Ini usulan kajaria', 'Ini usulan kajaria', 'Ini usulan kajaria', NULL, 'Ini usulan kajaria', 3),
+(22, 22, 'Ini usulan aspidum', 'Ini usulan aspidum', 'Ini usulan aspidum', 'Ini usulan aspidum', 'Ini usulan aspidum', NULL, 'Ini usulan aspidum', 4),
+(23, 22, 'Ini usulan kajati', 'Ini usulan kajati', 'Ini usulan kajati', 'Ini usulan kajati', 'Ini usulan kajati', NULL, 'Ini usulan kajati', 5),
+(24, 23, 'dasdasda', 'asdas', 'dasdasd', 'asdasd', 'asdasd', 'asdasdsa', 'adsadasdas', 1),
+(25, 24, '', '', '', '', '', '', '', 1);
 
 -- --------------------------------------------------------
 
@@ -508,7 +601,7 @@ INSERT INTO `tb_rentut` (`id_rentut`, `id_sop`, `pidana_pokok`, `pidana_tambahan
 
 CREATE TABLE `tb_sopform` (
   `id_sop` int(11) NOT NULL,
-  `id_pegawai` varchar(18) NOT NULL,
+  `nip` varchar(18) NOT NULL,
   `tujuan` tinytext NOT NULL,
   `dari` tinytext NOT NULL,
   `nomor_sop` varchar(32) NOT NULL,
@@ -516,6 +609,8 @@ CREATE TABLE `tb_sopform` (
   `tanggal` date NOT NULL,
   `terdakwa` tinytext NOT NULL,
   `perihal` tinytext NOT NULL,
+  `lampiran` tinytext NOT NULL,
+  `kategori` tinytext NOT NULL,
   `posisi` int(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -523,13 +618,15 @@ CREATE TABLE `tb_sopform` (
 -- Dumping data for table `tb_sopform`
 --
 
-INSERT INTO `tb_sopform` (`id_sop`, `id_pegawai`, `tujuan`, `dari`, `nomor_sop`, `sifat`, `tanggal`, `terdakwa`, `perihal`, `posisi`) VALUES
-(13, '2147483647', 'Kejaksaan Negeri Bengkulu', 'Kejaksaan Tinggi Bengkulu', '-', 'Rahasia', '2020-03-15', 'Perorangan', '', 2),
-(14, '2147483647', 'Kejaksaan Negeri Kepahiang', 'Kejaksaan Tinggi Bengkulu', '-', 'Rahasia', '2020-03-16', 'Perorangan', '', 2),
-(15, '1111111111111111', 'Kejaksaan Negeri Bengkulu', 'Kejaksaan Tinggi Bengkulu', '-', 'Rahasia', '2020-03-03', 'Koporasi', 'asdasda', 2),
-(20, '12345', 'Kejaksaan Negeri Bengkulu', 'KEJAKSAAN NEGERI BENGKULU SELATAN', '-', 'Rahasia', '2020-03-17', 'Perorangan', 'Perihal', 2),
-(21, '123456', 'Kejaksaan Negeri Bengkulu Selatan', 'KEJAKSAAN NEGERI BENGKULU UTARA', '-', 'Rahasia', '2020-03-17', 'Perorangan', 'perihal', 2),
-(22, '12', 'Kejaksaan Negeri Seluma', 'KEJAKSAAN NEGERI MUKO-MUKO', '-', 'Rahasia', '2020-03-17', 'Perorangan', 'e', 6);
+INSERT INTO `tb_sopform` (`id_sop`, `nip`, `tujuan`, `dari`, `nomor_sop`, `sifat`, `tanggal`, `terdakwa`, `perihal`, `lampiran`, `kategori`, `posisi`) VALUES
+(13, '2147483647', 'Kejaksaan Negeri Bengkulu', 'Kejaksaan Tinggi Bengkulu', '-', 'Rahasia', '2020-03-15', 'Perorangan', '', '', '', 2),
+(14, '2147483647', 'Kejaksaan Negeri Kepahiang', 'Kejaksaan Tinggi Bengkulu', '-', 'Rahasia', '2020-03-16', 'Perorangan', '', '', '', 2),
+(15, '1111111111111111', 'Kejaksaan Negeri Bengkulu', 'Kejaksaan Tinggi Bengkulu', '-', 'Rahasia', '2020-03-03', 'Koporasi', 'asdasda', '', '', 2),
+(20, '12345', 'Kejaksaan Negeri Bengkulu', 'KEJAKSAAN NEGERI BENGKULU SELATAN', '-', 'Rahasia', '2020-03-17', 'Perorangan', 'Perihal', '', '', 2),
+(21, '123456', 'Kejaksaan Negeri Bengkulu Selatan', 'KEJAKSAAN NEGERI BENGKULU UTARA', '-', 'Rahasia', '2020-03-17', 'Perorangan', 'perihal', '', '', 2),
+(22, '12', 'Kejaksaan Negeri Seluma', 'KEJAKSAAN NEGERI MUKO-MUKO', '-', 'Rahasia', '2020-03-04', 'Perorangan', 'e', 'lampiran', '', 6),
+(23, '131197', 'KEJAKSAAN NEGERI BENGKULU SELATAN', 'KEJAKSAAN NEGERI BENGKULU UTARA', '-', 'Rahasia', '2020-03-19', 'Perorangan', 'asdas', 'dasdas', 'Umum', 2),
+(24, '131197', 'KEJAKSAAN NEGERI BENGKULU', 'KEJAKSAAN NEGERI BENGKULU UTARA', '-', 'Rahasia', '2020-03-19', 'Perorangan', 'zxc', 'xzcz', 'Umum', 3);
 
 -- --------------------------------------------------------
 
@@ -557,7 +654,9 @@ INSERT INTO `tb_terlibat` (`id`, `id_sop`, `nip`) VALUES
 (18, 21, '2222222'),
 (19, 22, '1111111111111111'),
 (20, 22, '222222'),
-(21, 22, '2222222');
+(21, 22, '2222222'),
+(39, 24, '131197'),
+(40, 23, '131197');
 
 -- --------------------------------------------------------
 
@@ -581,7 +680,9 @@ INSERT INTO `tb_ukur` (`id_tolakukur`, `id_sop`, `tolak_ukur`) VALUES
 (3, 15, '1'),
 (8, 20, 'adsa'),
 (9, 21, 'tolak'),
-(10, 22, 'as');
+(10, 22, 'as'),
+(11, 23, 'asdas'),
+(12, 24, '');
 
 -- --------------------------------------------------------
 
@@ -611,7 +712,9 @@ CREATE TABLE `tb_wakilkorporasi` (
 INSERT INTO `tb_wakilkorporasi` (`id_wakil`, `id_sop`, `id_korporasi`, `nama_wakil`, `tempat_lahirwakil`, `tanggal_lahirwakil`, `jk_wakil`, `kebangsaan_wakil`, `alamat_wakil`, `agama_wakil`, `pekerjaan_wakil`, `pendidikan_wakil`) VALUES
 (1, 13, 1, '', '', '0000-00-00', '', NULL, '', '', '', ''),
 (2, 14, 2, '', '', '0000-00-00', '', NULL, '', '', '', ''),
-(3, 15, 3, '16', '17', '2019-12-18', 'laki-laki', NULL, '19', 'Islam', '20', '21');
+(3, 15, 3, '16', '17', '2019-12-18', 'laki-laki', NULL, '19', 'Islam', '20', '21'),
+(4, 23, 11, '', '', '0000-00-00', '', '', '', '', '', ''),
+(5, 24, 12, 'czxczx', 'asdasd', '2017-03-07', 'laki-laki', 'WNI', 'asdas', 'Islam', 'asdas', 'sdasd');
 
 --
 -- Indexes for dumped tables
@@ -746,73 +849,73 @@ ALTER TABLE `tb_wakilkorporasi`
 -- AUTO_INCREMENT for table `log_aktv`
 --
 ALTER TABLE `log_aktv`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=83;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=136;
 
 --
 -- AUTO_INCREMENT for table `tb_akibat`
 --
 ALTER TABLE `tb_akibat`
-  MODIFY `id_akibat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id_akibat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `tb_barangbukti`
 --
 ALTER TABLE `tb_barangbukti`
-  MODIFY `id_barangbukti` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id_barangbukti` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `tb_hasil`
 --
 ALTER TABLE `tb_hasil`
-  MODIFY `id_hasil` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_hasil` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tb_kasus`
 --
 ALTER TABLE `tb_kasus`
-  MODIFY `id_kasus` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id_kasus` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `tb_keadaan`
 --
 ALTER TABLE `tb_keadaan`
-  MODIFY `id_keadaan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_keadaan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=87;
 
 --
 -- AUTO_INCREMENT for table `tb_kendalikorporasi`
 --
 ALTER TABLE `tb_kendalikorporasi`
-  MODIFY `id_kendali` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_kendali` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `tb_korporasi`
 --
 ALTER TABLE `tb_korporasi`
-  MODIFY `id_korporasi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_korporasi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `tb_laporan`
 --
 ALTER TABLE `tb_laporan`
-  MODIFY `id_laporan` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_laporan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tb_orang`
 --
 ALTER TABLE `tb_orang`
-  MODIFY `id_orang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_orang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `tb_pasalbukti`
 --
 ALTER TABLE `tb_pasalbukti`
-  MODIFY `id_pasalbukti` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_pasalbukti` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `tb_pasaldakwa`
 --
 ALTER TABLE `tb_pasaldakwa`
-  MODIFY `id_pasaldakwa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_pasaldakwa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `tb_pegawai`
@@ -824,31 +927,31 @@ ALTER TABLE `tb_pegawai`
 -- AUTO_INCREMENT for table `tb_rentut`
 --
 ALTER TABLE `tb_rentut`
-  MODIFY `id_rentut` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id_rentut` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `tb_sopform`
 --
 ALTER TABLE `tb_sopform`
-  MODIFY `id_sop` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id_sop` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `tb_terlibat`
 --
 ALTER TABLE `tb_terlibat`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- AUTO_INCREMENT for table `tb_ukur`
 --
 ALTER TABLE `tb_ukur`
-  MODIFY `id_tolakukur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_tolakukur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `tb_wakilkorporasi`
 --
 ALTER TABLE `tb_wakilkorporasi`
-  MODIFY `id_wakil` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_wakil` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Constraints for dumped tables

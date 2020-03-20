@@ -49,13 +49,16 @@
                 <td>
                   <center>
                     <?php if($dt['posisi']>2){ ?>
-                        <a href="<?php echo base_url('jaksa/laporan/proses/'.$this->Mcrypt->encrypt($dt['id_sop']));?>">
-                            <button class="btn btn-warning" title="Proses">Proses</button>
+                        <a href="<?php echo base_url('jaksa/laporan/rentut/47/'.$this->Mcrypt->encrypt($dt['id_sop']));?>">
+                            <button class="btn btn-info" title="SOP-FORM 47">NOTA DINAS</button>
                           </a>
                     <?php }else{ ?>
                        <div class="tooltip-demo">
+                        <a href="<?php echo base_url('jaksa/laporan/rentut/47/'.$this->Mcrypt->encrypt($dt['id_sop']));?>">
+                            <button class="btn btn-info" title="SOP-FORM 47">NOTA DINAS</button>
+                          </a>
                           <a href="<?php echo base_url('jaksa/laporan/tambah/'.$this->Mcrypt->encrypt($dt['id_sop']));?>">
-                            <button class="btn btn-info" title="Ubah"><i class="fa fa-pencil"></i></button>
+                            <button class="btn btn-success" title="Ubah"><i class="fa fa-pencil"></i></button>
                           </a>
                           <a href="<?php echo base_url('jaksa/laporan/hapus/'.$this->Mcrypt->encrypt($dt['id_sop']));?>">
                           <button  class="btn btn-danger" title="Hapus"><i class="fa fa-trash"></i></button>
