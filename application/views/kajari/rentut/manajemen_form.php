@@ -49,7 +49,7 @@
                 <td>
                   <center>
                     <div class="tooltip-demo">
-                      <a href="<?php echo base_url('kajari/rentut/lihatForm/47');?>">
+                      <a href="<?php echo base_url('kajari/rentut/lihatForm/47/'.$dt['posisi'].'/'.$this->Mcrypt->encrypt($dt['id_sop']));?>" target="_blank">
                       <button  class="btn btn-primary" title="Hapus"><i class="fa fa-file"></i>&nbsp;&nbsp;FORM 47</button>
                       </a>
                       <?php if($dt['posisi'] >= 2){ ?>
@@ -58,7 +58,7 @@
                       </a>
                       <?php }; ?>
                       <?php if($dt['posisi'] == 6){?>
-                      <a href="<?php echo base_url('kajari/rentut/lihatForm/surat');?>">
+                      <a href="<?php echo base_url('kajari/rentut/lihatForm/surat');?>" target="_blank">
                       <button  class="btn btn-primary" title="Hapus"><i class="fa fa-file"></i>&nbsp;&nbsp;SURAT</button>
                       </a>
                     <?php } ?>
