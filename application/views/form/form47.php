@@ -77,7 +77,7 @@
                     <?php if($form47[0]['terdakwa']=="Perorangan"){ ?>
                     <tr>
                       	<td width="2%" valign="top"></td>
-                      	<td width="98%">(1) <b>Subjek orang perorangan (naturlijk person) </b></td>
+                      	<td width="98%"><b>Subjek orang perorangan (naturlijk person) </b></td>
                     </tr>
                     <tr>
                     	<td width="2%" valign="top"></td>
@@ -680,18 +680,28 @@
                   <td width="40%"></td>    
                   <td width="60%" align="center"><b>PENUNTUT UMUM</b></td>
                 </tr>
+                <?php 
+                $terlibat = $this->db->join('tb_pegawai','tb_pegawai.nip=tb_terlibat.nip','LEFT')->
+							where('tb_terlibat.id_sop', $form[0]['id'])->
+							get('tb_terlibat')->result_array();
+                foreach ($terlibat as $trl) {
+                ?>
                 <tr> 
                   <td width="40%"></td>   
-                  <td width="60%" height="60"></td>   
+                  <td width="60%" height="60" align="center">
+                  	<?php $kode = $form[0]['id'];$nip = $trl['nip'];?>
+					<img style="width:20%" src="<?php echo site_url('Generateqr/generate/'.$kode.'/'.$nip) ?>">
+				  </td>   
                 </tr>
                 <tr>
                   <td width="40%"></td>    
-                  <td width="60%" align="center"><u>(.................)</u></td>                         
+                  <td width="60%" align="center"><u>( <?php echo $trl['nama_pegawai'] ?> )</u></td>                         
                 </tr>
                 <tr> 
                   <td width="40%"></td>     
-                  <td width="60%" align="center">Pangkat/Nip. .........</td>         
+                  <td width="60%" align="center">Pangkat/Nip. <?php echo $trl['pangkat_pegawai'].'/'.$trl['nip'];?></td>         
                 </tr>
+            <?php } ?>
             </table>
           </div>
           <br>

@@ -88,7 +88,7 @@
 	                        <?php if($form[0]['terdakwa'] == "Perorangan"){?>
 	                        <tr>
 		                      	<td width="2%" valign="top"></td>
-		                      	<td width="98%">(1) <b>Subjek orang perorangan (naturlijk person) </b></td>
+		                      	<td width="98%"><b>Subjek orang perorangan (naturlijk person) </b></td>
 		                    </tr>
 		                    <tr>
 		                    	<td width="2%" valign="top"></td>

@@ -135,8 +135,7 @@ class Laporan extends CI_Controller {
 	public function rentut($jenis,$id){
 		$id=$this->Mcrypt->decrypt($id);
 		$data=array(
-			
-			'form' => $this->db->order_by('tb_rentut.id_sop','DESC')->
+			'form' => $this->db->select('*, tb_sopform.id_sop as id')->order_by('tb_rentut.id_sop','DESC')->
 					join('tb_korporasi','tb_korporasi.id_sop=tb_sopform.id_sop','LEFT')->
 					join('tb_kendalikorporasi','tb_kendalikorporasi.id_sop=tb_sopform.id_sop','LEFT')->
 					join('tb_wakilkorporasi','tb_wakilkorporasi.id_sop=tb_sopform.id_sop','LEFT')->

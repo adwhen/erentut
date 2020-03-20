@@ -3,7 +3,8 @@
 <head>
 	<meta charset="utf-8">
       <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
-      <title>Berita | Kejaksaan Tinggi Bengkulu </title>
+      <title>Kejaksaan Tinggi Bengkulu </title>
+      <link href="<?= base_url('asset/gambar/icon/kajati.png') ?>" rel="shortcut icon" type="image/vnd.microsoft.icon"/>
       <link rel="stylesheet" href="<?php echo base_url(); ?>asset/assets_front/css/responsive.css">
       <link rel="stylesheet" href="<?php echo base_url(); ?>asset/assets_front/css/styles.css">
       <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>asset/assets_front/vendor/bootstrap/bootstrap.css">
