@@ -124,6 +124,7 @@ class Rentut extends CI_Controller {
                   	join('tb_laporan','tb_laporan.id_sop=tb_sopform.id_sop','LEFT')->
 					where('tb_sopform.id_sop', $id)->
 					get('tb_sopform')->result_array(),
+			'kajari'=>$this->db->get_where('tb_rentut',array('id_sop'=>$id,'level'=>3))->result_array(),
 			'form47'=>$this->Mnodis47->tampil($id),
 		);
 		if($jenis == '47'){

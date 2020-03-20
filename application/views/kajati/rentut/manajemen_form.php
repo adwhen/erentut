@@ -55,9 +55,11 @@
                       <a href="<?php echo base_url('kajati/rentut/lihatForm/48/'.$this->Mcrypt->encrypt($dt['id_sop']));?>" target="_blank">
                       <button  class="btn btn-primary" title="Hapus"><i class="fa fa-file"></i>&nbsp;&nbsp;FORM 48</button>
                       </a>
-                      <a href="<?php echo base_url('kajati/rentut/lihatForm/surat/'.$this->Mcrypt->encrypt($dt['id_sop']));?>" target="_blank">
+                      <?php if($dt['level'==6]){?>
+                        <a href="<?php echo base_url('kajati/rentut/lihatForm/surat/'.$this->Mcrypt->encrypt($dt['id_sop']));?>" target="_blank">
                       <button  class="btn btn-primary" title="Hapus"><i class="fa fa-file"></i>&nbsp;&nbsp;SURAT</button>
                       </a>
+                      <?php } ?>
                     </div>
                   </center>
                 </td>

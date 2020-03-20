@@ -1,163 +1,152 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="utf-8">
-	<title>Surat Terakhir</title>
+  <style>
+    table, th, td {}
+  </style>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>KEJAKSAAN TINGGI BENGKULU</title>
+  <link href="<?= base_url('asset/gambar/icon/kajati.png') ?>" rel="shortcut icon" type="image/vnd.microsoft.icon"/>
+  <!-- Tell the browser to be responsive to screen width -->
 
-	<style type="text/css">
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
 
-	::selection { background-color: #E13300; color: white; }
-	::-moz-selection { background-color: #E13300; color: white; }
-
-	body {
-		background-color: #fff;
-		margin: 40px;
-		font: 13px/20px normal Helvetica, Arial, sans-serif;
-		color: #4F5155;
-	}
-
-	a {
-		color: #003399;
-		background-color: transparent;
-		font-weight: normal;
-	}
-
-	h1 {
-		color: #444;
-		background-color: transparent;
-		border-bottom: 1px solid #D0D0D0;
-		font-size: 19px;
-		font-weight: normal;
-		margin: 0 0 14px 0;
-		padding: 14px 15px 10px 15px;
-	}
-
-	code {
-		font-family: Consolas, Monaco, Courier New, Courier, monospace;
-		font-size: 12px;
-		background-color: #f9f9f9;
-		border: 1px solid #D0D0D0;
-		color: #002166;
-		display: block;
-		margin: 14px 0 14px 0;
-		padding: 12px 10px 12px 10px;
-	}
-
-	#body {
-		margin: 0 15px 0 15px;
-	}
-
-	p.footer {
-		text-align: right;
-		font-size: 11px;
-		border-top: 1px solid #D0D0D0;
-		line-height: 32px;
-		padding: 0 10px 0 10px;
-		margin: 20px 0 0 0;
-	}
-
-	#container {
-		margin: 10px;
-		border: 1px solid #D0D0D0;
-		box-shadow: 0 0 8px #D0D0D0;
-	}
-	</style>
+  <!-- Google Font -->
 </head>
-<body onload="window.print()">
+  <body onload="window.print();">
+    <div class="wrapper">
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <!-- Main content -->
+        <section class="content">
+          <div>
+            <table border="0" style="width: 100%;" align="justify">
+              <tbody>
+                <tr>   
+                  <td rowspan="4" align="left" width="2%"> <img src="<?= base_url('asset/gambar/icon/kajati.png') ?>" width="120" height="90" style="float:left;margin-right:-100;"></td>    
+                  <td align="center" style="font-size: 20px;">KEJAKSAAN REPUBLIK INDONESIA</td> 
+                </tr>
+                <tr>
+                	<td align="center" style="font-size: 30px;" >KEJAKSAAN TINGGI BENGKULU</td>
+                </tr>
+                <tr>
+                	<td align="center">Jalan S. Parman Nomor 2 Kota Bengkulu</td>
+                </tr>
+                <tr>
+                	<td align="center">Telp. (0736) 342006 email <u>pidumkjtbkl@gmail.com</u></td>
+                </tr>
+              </tbody>
+            </table>
+            <hr style="border-style:solid;border-color:black;border-width:3;">
+            <table border="0" style="width: 100%;" align="justify">
+              <tbody>
+                <tr>  
+                  <td width="10%" align="justify">Nomor</td>       
+                  <td width="2%" align="justify">:</td>           
+                  <td width="55%" align="justify"><?php echo $form47[0]['nomor_sop'] ?></td> 
+                  <td width="2%" align="justify"></td>
+                  <td align="justify">Bengkulu, 28 Februari 2018</td>                  
+                </tr>
+                <tr>  
+                  <td width="10%" align="justify">Sifat</td>       
+                  <td width="2%" align="justify">:</td>           
+                  <td width="55%" align="justify"><?php echo $form47[0]['sifat'] ?></td>
+                  <td width="2%" align="justify"></td>
+                  <td align="justify"></td>                   
+                </tr>
+                <tr>  
+                  <td width="10%" align="justify">Lampiran</td>       
+                  <td width="2%" align="justify">:</td>           
+                  <td width="55%" align="justify"><?php echo $form47[0]['lampiran'] ?></td> 
+                  <td width="2%" align="justify"></td> 
+                  <td align="justify"></td>                 
+                </tr>
+                <tr>  
+                  <td width="10%" valign="top">Perihal</span></td>       
+                  <td width="2%" valign="top">:</td>           
+                  <td width="55%" valign="top" align="justify"><?php echo $form47[0]['perihal'] ?></td> 
+                  <td width="2%" align="justify"></td>
+                  <td align="justify"></td>                   
+                </tr>
+                <tr>  
+                  <td width="10%" valign="top"></span></td>       
+                  <td width="2%" valign="top"></td>           
+                  <td width="55%" valign="top" align="justify"><hr align="left"></td> 
+                  <td width="2%" align="justify"></td>
+                  <td align="justify"></td>                   
+                </tr>
+              </tbody>
+            </table>
+            <p>Yth. <br> <b><?php echo $form47[0]['dari'] ?></b> <br> Di - <br> &nbsp;&nbsp; <b><u><?php echo strtoupper(lokasi($form47[0]['dari']))?></u></b></p>
+            <p align="justify"> &nbsp;&nbsp;&nbsp;Sehubungan dengan surat dari <?php echo ucwords(strtolower($form47[0]['dari'])) ?> Nomor : <?php echo $form47[0]['nomor_sop'] ?> tanggal <?php echo tgl_indo($form47[0]['tanggal']) ?>, perihal sebagaimana tersebut pada pokok surat diatas, bersama ini disampaikan petunjuk pimpinan agar Jaksa Penuntut Umum menuntut :</p>
+            <table border="0" style="width: 100%;">
+              	<tbody>
+                    <tr>
+                      	<td width="2%" valign="top">1.</td>
+                      	<td width="98%" valign="top" align="justify ">Terdakwa <?php if($data[0]['terdakwa']=="Perorangan"){echo $form[0]['nama_orang'];}else{echo $form[0]['nama_korporasi'];} ?> terbukti secara sah dan meyakinkan telah melakukan tindak pidana <?php echo $form[0]['kategori'] ?> sebagaimana diatur dalam melanggar <?php echo $form[0]['pasal_dakwa'] ?></td>
+                    </tr>
+                    <tr>
+                      	<td width="2%" valign="top">2.</td>
+                      	<td width="98%" valign="top" align="justify">Agar terdakwa Terdakwa <?php if($data[0]['terdakwa']=="Perorangan"){echo $form[0]['nama_orang'];}else{echo $form[0]['nama_korporasi'];} ?> dituntut pidana penjara selama <?php echo $form[0]['pidana_pokok'] ?> dan denda <?php echo $form[0]['denda'] ?></td>
+                    </tr>
+                    <tr>
+                      <td width="2%" valign="top">3.</td>
+                      <td valign="top" align="justify">Barang bukti Conform dengan Usul Kajari Bengkulu dan agar terdakwa membayar biaya perkara sebesar <?php echo $kajari[0]['biaya_perkara'] ?></td>
+                    </tr>
+                </tbody>                        	
+            </table>
+            <p align="justify">&nbsp;&nbsp;&nbsp;Demikianlah untuk dilaksanakan pembacaan tuntutan (P 43) dan putusan perkara ini agar dilaporkan kepada Kepala kejaksaan Tinggi Bengkulu serta tembusannya kepada Asisten Tindak Pidana Umum Kejaksaan Tinggi Bengkulu</p>
+          </div>
+          <br>
+          <div style="page-break-inside: avoid;">
+            <table border="0" style="width: 100%;">
+                <tr>  
+                  <td width="40%"></td>    
+                  <td width="60%" align="center">AN KEPALA KEJAKSAAN TINGGI BENGKULU</td>
+                </tr>
+                <tr>  
+                  <td width="40%"></td>    
+                  <td width="60%" align="center">ASISTEN TINDAK PIDANA UMUM</td>
+                </tr>
+                <tr> 
+                  <td width="40%"></td>   
+                  <td width="60%" height="60"></td>   
+                </tr>
+                <tr>
+                  <td width="40%"></td>    
+                  <td width="60%" align="center"><u>(.................)</u></td>                         
+                </tr>
+                <tr> 
+                  <td width="40%"></td>     
+                  <td width="60%" align="center">Pangkat/Nip. .........</td>         
+                </tr>
+            </table>
+          </div>
+          <br>
+          <!-- /.row -->
+        </section>
+        <footer class="main-footer">
+          <div class="pull-right hidden-xs">
+             <u><b>Tembusan</u></b>
+          </div>
+          <hr width="5%" align="left">
+        </footer>
+        <!-- /.content -->
+      </div>
+      <!-- /.content-wrapper -->
+      <!-- Add the sidebar's background. This div must be placed
+           immediately after the control sidebar -->
+    </div>
+  <!-- ./wrapper -->
 
-<div id="container">
-	<br>
-	<table width="1000" border="0" cellpadding="0" cellspacing="0" align="center" style="color: #000000; font-size: 18px; text-align: justify; font-weight: normal;">
-    <tr>
-      <td width="840" valign="top">
-        <table width="97%" border="0" cellspacing="0" cellpadding="0">
-          <!--DWLayoutTable-->
-          <tr>
-            <td height="28" colspan="2" rowspan="4" class="atv_judul4" style="text-align: center"><!--DWLayoutEmptyCell-->&nbsp;</td>
-            <td height="28" colspan="4" rowspan="4" class="atv_judul4" style="text-align: center"><span class="atv_judul4" style="text-align: center"><span class="atv_judul4" style="text-align: center"><span class="atv_judul4" style="text-align: center"><span class="atv_judul4" style="text-align: left"><span class="atv_judul4" style="text-align: left"><img src="https://kejati-bengkulu.go.id/ptsp_kejati/asset/gambar/icon/kajati.png" width="90px"/></span></span></span></span></span></td>
-          </tr>
-          <tr>
-            <td height="36" colspan="7" class="atv_judul4" style="text-align: center"><span class="atv_judul4" style="text-align: center; font-size: 24px; font-weight: normal; font-family: Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', serif;"><b style="color: #070707; font-size: 22px; font-weight: normal;"><b>KEJAKSAAN TINGGI BENGKULU</b></span></td>
-            <td class="atv_judul4" style="text-align: center; font-weight: normal; font-size: 18px; font-family: Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', serif;"><!--DWLayoutEmptyCell-->&nbsp;</td>
-          </tr>
-          <tr>
-            <td height="29" colspan="7" class="atv_judul4" style="text-align: center"><span class="atv_judul4" style="text-align: center"><span class="atv_judul4" style="text-align: center; font-weight: normal; font-size: 14px;"><b><span class="style61">Jl. S. Parman No.2, Padang Jati, Kec. Ratu Samban, Kota Bengkulu</span></b></span></span></b></td>
-            <td class="atv_judul4" style="text-align: center; font-weight: normal; font-size: 18px; font-family: Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', serif;"><!--DWLayoutEmptyCell-->&nbsp;</td>
-          </tr>
-          <tr>
-            <td height="28" colspan="7" class="atv_judul4" style="text-align: center"><span class="atv_judul4" style="text-align: center"><span class="atv_judul4" style="text-align: center; font-weight: normal; font-size: 14px; font-family: Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', serif;"><span class="style71" style="text-align: center; font-size: 18px; font-weight: normal;">Telp. (0736) 21631 email : admin@kejati.go.id </span></span></span></td>
-            <td class="atv_judul4" style="text-align: center; font-weight: normal; font-size: 18px; font-family: Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', serif;"><!--DWLayoutEmptyCell-->&nbsp;</td>
-          </tr>
-          <tr>
-            <td height="18" class="atv_judul4" style="text-align: center"><!--DWLayoutEmptyCell-->&nbsp;</td>
-            <td height="18" class="atv_judul4" style="text-align: center"><!--DWLayoutEmptyCell-->&nbsp;</td>
-            <td height="18" colspan="12" class="atv_judul4" style="text-align: justify"><span class="atv_judul4" style="text-align: justify"><hr></span></td>
-            <td width="13" height="18" class="atv_judul4" style="text-align: center"><!--DWLayoutEmptyCell-->&nbsp;</td>
-          </tr>
-          <tr>
-            <td height="18" class="atv_judul4" style="text-align: center"><!--DWLayoutEmptyCell-->&nbsp;</td>
-            <td height="18" class="atv_judul4" style="text-align: center"><!--DWLayoutEmptyCell-->&nbsp;</td>
-            <td width="30" height="18" class="atv_judul4" style="text-align: center"><!--DWLayoutEmptyCell-->&nbsp;</td>
-            <td height="18" colspan="11" class="atv_judul4" style="text-align: center"><strong></strong> </strong></td>
-            <td height="18" class="atv_judul4" style="text-align: center"><!--DWLayoutEmptyCell-->&nbsp;</td>
-          </tr>
-          <tr>
-            <td height="18" class="atv_judul4" style="text-align: center"><!--DWLayoutEmptyCell-->&nbsp;</td>
-            <td height="18" class="atv_judul4" style="text-align: center"><!--DWLayoutEmptyCell-->&nbsp;</td>
-            <td height="18" class="atv_judul4" style="text-align: center"><!--DWLayoutEmptyCell-->&nbsp;</td>
-            <td height="18" colspan="11" class="atv_judul4" style="text-align: center"><span class="atv_judul4" style="text-align: center"><span class="atv_judul4" style="text-align: center; font-size: 14px;"><b>NOMOR : </b></span></span></td>
-            <td height="18" class="atv_judul4" style="text-align: center"><!--DWLayoutEmptyCell-->&nbsp;</td>
-          </tr>
-          
-          <tr>
-            <td height="20" colspan="15" class="atv_judul4" style="text-align: center"><!--DWLayoutEmptyCell-->&nbsp;</td>
-          </tr>
-          <tr>
-            <td height="19" colspan="2" class="atv_judul4" style="text-align: center"><!--DWLayoutEmptyCell-->&nbsp;</td>
-            <td height="19" colspan="2" class="atv_judul4" style="text-align: justify"><!--DWLayoutEmptyCell-->&nbsp;</td>
-            <td height="19" colspan="4" class="inline style" style="text-align: left"><!--DWLayoutEmptyCell-->&nbsp;</td>
-            <td height="19" class="inline style" style="text-align: justify"><!--DWLayoutEmptyCell-->&nbsp;</td>
-            <td height="19" colspan="3" class="inline style" style="text-align: justify"><!--DWLayoutEmptyCell-->&nbsp;</td>
-          </tr>
-	    </table>
-        <table width="95%" border="0" cellspacing="0" cellpadding="0">
-          <!--DWLayoutTable-->
-          <tr>
-            <td width="186" height="5"><!--DWLayoutEmptyCell-->&nbsp;</td>
-            <td width="105"><!--DWLayoutEmptyCell-->&nbsp;</td>
-            <td width="183"><!--DWLayoutEmptyCell-->&nbsp;</td>
-            <td colspan="2"><!--DWLayoutEmptyCell-->&nbsp;</td>
-          </tr>
-		  <tr>
-		    <td height="7"></td>
-		    <td></td>
-		    <td></td>
-		    <td></td>
-		    <td valign="top"></td>
-	      </tr>
-		  <tr>
-		    <td height="7"></td>
-		    <td></td>
-		    <td></td>
-		    <td></td>
-		    <td valign="top"></td>
-	      </tr>
-          <tr>
-           
-            <td height="171" colspan="2" valign="top">
-			</td>
-            <td><!--DWLayoutEmptyCell-->&nbsp;</td>
-            <td colspan="2" align="center" valign="top" style="font-size: 18px; font-weight: bold;"><p>Kepala Kejaksaan Tinggi Bengkulu<br><br>
-            					<img style="width:25%" src=""><br>
-            <br><u>Amandra Syah Arwan, S.H., M.H.</u><br>NIP. -</td>
-          </tr>
-      </table></td>
-    </tr>
-  </table>
+  <!-- jQuery 3 -->
 
-	<p class="footer">Page rendered in <strong>0.0472</strong> seconds. CodeIgniter Version <strong>3.1.11</strong></p>
-</div>
-
-</body>
+  </body>
 </html>
