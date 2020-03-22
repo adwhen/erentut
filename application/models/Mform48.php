@@ -18,7 +18,6 @@ class Mform48 extends CI_Model {
     		'biaya_perkara' =>$this->input->post('biaya_perkara'),
     		'pendapat' =>$this->input->post('pendapat'),
             'level' => $level
-
     	);
     	if($proses==0){
             $this->db->insert('tb_rentut',$data);
