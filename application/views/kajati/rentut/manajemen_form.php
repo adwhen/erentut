@@ -56,7 +56,7 @@
                       <button  class="btn btn-primary" title="Hapus"><i class="fa fa-file"></i>&nbsp;&nbsp;FORM 48</button>
                       </a>
                       <?php if($dt['posisi']==6){?>
-                        <a href="<?php echo base_url('kajati/rentut/lihatForm/surat/'.$this->Mcrypt->encrypt($dt['id_sop']));?>" target="_blank">
+                      <a href="<?php echo base_url('kajati/rentut/lihatForm/surat/'.$this->Mcrypt->encrypt($dt['id_sop']));?>" target="_blank">
                       <button  class="btn btn-primary" title="Hapus"><i class="fa fa-file"></i>&nbsp;&nbsp;SURAT</button>
                       </a>
                       <?php } ?>

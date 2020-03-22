@@ -71,12 +71,13 @@ class Rentut extends CI_Controller {
 		}else{
 			$id=$this->Mcrypt->decrypt($id);
 			$check=$this->db->get_where('tb_rentut',array('id_sop' => $id,'level' => $this->level))->result_array();
+			$nextLevel = 0; 
 			if(count($check)>0){
 				echo $proses=1; #1 edit
 			}else{
 				echo $proses=0; #0 tambah
+				$nextLevel = $this->input->post('nextLevel');
 			};
-			$nextLevel = $this->input->post('nextLevel');
 			$this->Mform48->rentut($id,$proses,$this->level,$nextLevel);
 			if($proses=0){
 				$this->Mlog->logAktivitas("Kajari ".$this->session->userdata('username')." menambahkan usulan");

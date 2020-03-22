@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 5.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 20, 2020 at 02:00 AM
--- Server version: 10.3.16-MariaDB
--- PHP Version: 7.3.7
+-- Generation Time: Mar 22, 2020 at 11:22 AM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.2.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -175,7 +175,30 @@ INSERT INTO `log_aktv` (`id`, `username`, `ip`, `aktivitas`, `datetime`) VALUES
 (132, '131197', '::1', 'Login ke sistem', '2020-03-20 01:12:54'),
 (133, '54321', '::1', 'Login ke sistem', '2020-03-20 01:13:21'),
 (134, '54321', '::1', 'Kajati 54321 mengubah usulan', '2020-03-20 01:34:43'),
-(135, '131197', '::1', 'mengubah sopform 47', '2020-03-20 01:43:59');
+(135, '131197', '::1', 'mengubah sopform 47', '2020-03-20 01:43:59'),
+(136, '321', '::1', 'Login ke sistem', '2020-03-20 11:43:33'),
+(137, '54321', '::1', 'Login ke sistem', '2020-03-20 11:51:35'),
+(138, '54321', '::1', 'Login ke sistem', '2020-03-20 11:52:01'),
+(139, '4321', '::1', 'Login ke sistem', '2020-03-20 11:56:49'),
+(140, '54321', '::1', 'Login ke sistem', '2020-03-20 11:57:27'),
+(141, '321', '::1', 'Login ke sistem', '2020-03-20 12:00:05'),
+(142, 'admin', '::1', 'Login ke sistem', '2020-03-20 02:58:22'),
+(143, '321', '::1', 'Login ke sistem', '2020-03-20 02:59:01'),
+(144, 'admin', '::1', 'Login ke sistem', '2020-03-22 02:54:28'),
+(145, '321', '::1', 'Login ke sistem', '2020-03-22 02:54:50'),
+(146, '321', '::1', 'Kajari 321 mengubah usulan', '2020-03-22 03:10:20'),
+(147, '4321', '::1', 'Login ke sistem', '2020-03-22 03:11:06'),
+(148, '54321', '::1', 'Login ke sistem', '2020-03-22 03:12:14'),
+(149, '54321', '::1', 'Login ke sistem', '2020-03-22 03:12:25'),
+(150, 'admin', '::1', 'Login ke sistem', '2020-03-22 03:35:51'),
+(151, 'admin', '::1', 'Login ke sistem', '2020-03-22 10:54:52'),
+(152, '321', '::1', 'Login ke sistem', '2020-03-22 10:55:19'),
+(153, '321', '::1', 'Kajari 321 mengubah usulan', '2020-03-22 10:59:43'),
+(154, '321', '::1', 'Kajari 321 mengubah usulan', '2020-03-22 11:01:33'),
+(155, '321', '::1', 'Kajari 321 mengubah usulan', '2020-03-22 11:08:10'),
+(156, '4321', '::1', 'Login ke sistem', '2020-03-22 11:14:24'),
+(157, '54321', '::1', 'Login ke sistem', '2020-03-22 11:17:19'),
+(158, '54321', '::1', 'Login ke sistem', '2020-03-22 11:17:26');
 
 -- --------------------------------------------------------
 
@@ -587,11 +610,12 @@ INSERT INTO `tb_rentut` (`id_rentut`, `id_sop`, `pidana_pokok`, `pidana_tambahan
 (10, 21, 'z', 'y', 'c', 'd', 'e', NULL, 'f', 2),
 (13, 22, 'Ini usulan kajari', 'Ini usulan kajari', 'Ini usulan kajari', 'Ini usulan kajari', 'Ini usulan kajari', 'fwe', 'Ini usulan kajari', 1),
 (14, 22, 'Ini usulan kasi', 'Ini usulan kasi', 'Ini usulan kasi', 'Ini usulan kasi', 'Ini usulan kasi', NULL, 'Ini usulan kasi', 2),
-(20, 22, 'Ini usulan kajaria', 'Ini usulan kajaria', 'Ini usulan kajaria', 'Ini usulan kajaria', 'Ini usulan kajaria', NULL, 'Ini usulan kajaria', 3),
-(22, 22, 'Ini usulan aspidum', 'Ini usulan aspidum', 'Ini usulan aspidum', 'Ini usulan aspidum', 'Ini usulan aspidum', NULL, 'Ini usulan aspidum', 4),
-(23, 22, 'Ini usulan kajati', 'Ini usulan kajati', 'Ini usulan kajati', 'Ini usulan kajati', 'Ini usulan kajati', NULL, 'Ini usulan kajati', 5),
+(20, 221, 'Ini usulan kajaria', 'Ini usulan kajaria', 'Ini usulan kajaria', 'Ini usulan kajaria', 'Ini usulan kajaria', NULL, 'Ini usulan kajaria', 9),
+(22, 221, 'Ini usulan aspidum', 'Ini usulan aspidum', 'Ini usulan aspidum', 'Ini usulan aspidum', 'Ini usulan aspidum', NULL, 'Ini usulan aspidum', 7),
+(23, 221, 'Ini usulan kajati', 'Ini usulan kajati', 'Ini usulan kajati', 'Ini usulan kajati', 'Ini usulan kajati', NULL, 'Ini usulan kajati', 8),
 (24, 23, 'dasdasda', 'asdas', 'dasdasd', 'asdasd', 'asdasd', 'asdasdsa', 'adsadasdas', 1),
-(25, 24, '', '', '', '', '', '', '', 1);
+(25, 24, '', '', '', '', '', '', '', 1),
+(27, 22, ' Ini usulan kajari 3', ' Ini usulan kajari 2', ' Ini usulan kajari 2', ' Ini usulan kajari 2', ' Ini usulan kajari 2', NULL, ' Ini usulan kajari 2', 3);
 
 -- --------------------------------------------------------
 
@@ -652,7 +676,7 @@ INSERT INTO `tb_terlibat` (`id`, `id_sop`, `nip`) VALUES
 (16, 21, '1111111111111111'),
 (17, 21, '222222'),
 (18, 21, '2222222'),
-(19, 22, '1111111111111111'),
+(19, 22, '131197'),
 (20, 22, '222222'),
 (21, 22, '2222222'),
 (39, 24, '131197'),
@@ -849,7 +873,7 @@ ALTER TABLE `tb_wakilkorporasi`
 -- AUTO_INCREMENT for table `log_aktv`
 --
 ALTER TABLE `log_aktv`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=136;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=159;
 
 --
 -- AUTO_INCREMENT for table `tb_akibat`
@@ -927,7 +951,7 @@ ALTER TABLE `tb_pegawai`
 -- AUTO_INCREMENT for table `tb_rentut`
 --
 ALTER TABLE `tb_rentut`
-  MODIFY `id_rentut` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id_rentut` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `tb_sopform`
