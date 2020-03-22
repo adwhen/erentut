@@ -49,6 +49,7 @@ class Rentut extends CI_Controller {
 		$this->form_validation->set_rules('pendapat', 'pendapat', 'required');
 
 		if($this->form_validation->run()===false){
+			$jumlah = $this->db->order_by('id_sop','DESC')->get_where('tb_sopform',array('posisi'=>$this->session->userdata('level'),'tujuan' => $this->session->userdata('keterangan_pegawai')))->result_array();
 			$id=$this->Mcrypt->decrypt($id);
 			$check = $this->db->
 								join('tb_sopform','tb_sopform.id_sop=tb_rentut.id_sop')->
@@ -61,6 +62,10 @@ class Rentut extends CI_Controller {
 				'jaksa' => $jaksa,
 				'kasi' => $kasi
 			);
+			$data['jumlah'] = 0;
+			if(!empty($data)){
+				$data['jumlah'] = count($jumlah);
+			}
 			$this->load->view('kajari/snippet/template',$data);
 
 		}else{
@@ -71,7 +76,8 @@ class Rentut extends CI_Controller {
 			}else{
 				echo $proses=0; #0 tambah
 			};
-			$this->Mform48->rentut($id,$proses,$this->level,$this->nextLevel);
+			$nextLevel = $this->input->post('nextLevel');
+			$this->Mform48->rentut($id,$proses,$this->level,$nextLevel);
 			if($proses=0){
 				$this->Mlog->logAktivitas("Kajari ".$this->session->userdata('username')." menambahkan usulan");
 				$this->session->set_flashdata('msg','Usulan Berhasil Ditambahkan.');

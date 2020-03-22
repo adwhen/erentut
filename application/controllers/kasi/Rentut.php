@@ -49,6 +49,7 @@ class Rentut extends CI_Controller {
 		$this->form_validation->set_rules('pendapat', 'pendapat', 'required');
 
 		if($this->form_validation->run()===false){
+		$jumlah = $this->db->order_by('id_sop','DESC')->get_where('tb_sopform',array('posisi'=>$this->session->userdata('level'),'tujuan' => $this->session->userdata('keterangan_pegawai')))->result_array();
 			$id=$this->Mcrypt->decrypt($id);
 
 			$check = $this->db->
@@ -60,6 +61,10 @@ class Rentut extends CI_Controller {
 				'data'	=> $check,
 				'jaksa' => $jaksa
 			);
+			$data['jumlah'] = 0;
+			if(!empty($data)){
+				$data['jumlah'] = count($jumlah);
+			}
 			$this->load->view('kasi/snippet/template',$data);
 
 		}else{

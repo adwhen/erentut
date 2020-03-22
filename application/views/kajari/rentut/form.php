@@ -17,6 +17,17 @@
             <div class="col-md-12" style="background-color: #00a65a;margin-bottom: 20px;color:white;"><center><label class="control-label">Rencana Tuntutan Pidana</label></center></div>
             <br>
             <div class="form-group">
+              <label class="col-sm-2 control-label">Diteruskan ke</label>
+              <div class="col-sm-10">
+                <select required class="form-control" id="nextLevel" name="nextLevel">
+                  <option value="" hidden="">PILIH</option>
+                    <option value="4">ASISTEN TINDAK PIDANA UMUM KEJAKSAAN TINGGI BENGKULU</option>
+                    <option value="5">KEPALA KEJAKSAAN TINGGI BENGKULU/WAKIL KEPALA KEJAKSAAN TINGGI BENGKULU</option>
+                </select>
+              </div>
+            </div>
+            <hr style="border: 1px solid green;">
+            <div class="form-group">
               <label class="col-sm-2 control-label">Pidana Pokok</label>
 
               <div class="col-sm-10">
