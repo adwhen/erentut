@@ -45,7 +45,7 @@
                                         <small id="emailHelp" class="form-text text-muted">Perhatikan dengan baik pengetikan password</small>
                                     </div>
                                     <br>
-                                    <button type="submit" class="btn btn-success">LOGIN</button>
+                                    <button type="submit" class="btn btn-success" style="width:40%;">LOGIN</button>
                                 </form>
                             </div>
                           </div>

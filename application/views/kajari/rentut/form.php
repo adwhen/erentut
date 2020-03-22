@@ -16,17 +16,19 @@
           <div class="box-body">
             <div class="col-md-12" style="background-color: #00a65a;margin-bottom: 20px;color:white;"><center><label class="control-label">Rencana Tuntutan Pidana</label></center></div>
             <br>
+            <?php if(empty($data)){?>
             <div class="form-group">
-              <label class="col-sm-2 control-label">Diteruskan ke</label>
+              <label class="col-sm-2 control-label">Tindak lanjut</label>
               <div class="col-sm-10">
                 <select required class="form-control" id="nextLevel" name="nextLevel">
                   <option value="" hidden="">PILIH</option>
-                    <option value="4">ASISTEN TINDAK PIDANA UMUM KEJAKSAAN TINGGI BENGKULU</option>
-                    <option value="5">KEPALA KEJAKSAAN TINGGI BENGKULU/WAKIL KEPALA KEJAKSAAN TINGGI BENGKULU</option>
+                    <option value="6">Keputusan Final</option>
+                    <option value="4">Akan diteruskan ke Asisten Tindak Pidana Umum Kejaksaan Tinggi Bengkulu</option>
                 </select>
               </div>
             </div>
             <hr style="border: 1px solid green;">
+            <?php } ?>
             <div class="form-group">
               <label class="col-sm-2 control-label">Pidana Pokok</label>
 
@@ -72,7 +74,7 @@
           </div>
           <!-- /.box-body -->
           <div class="box-footer">
-            <button <?php if($data[0]['posisi']>4){echo "disabled";} ?> class="btn btn-success pull-right" type="submit">Simpan</button>
+            <button class="btn btn-success pull-right" type="submit">Simpan</button>
           </div>
         </div>
         <div class="tab-pane" id="tab_2">
